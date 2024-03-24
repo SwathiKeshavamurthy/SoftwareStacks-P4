@@ -34,7 +34,7 @@ class Post(models.Model):
         ordering = ['-created_on']
 
     def __str__(self):
-        return self.title
+        return f"The title of this post is {self.title}"
 
     def total_likes(self):
         """
@@ -47,3 +47,24 @@ class Post(models.Model):
         Returns the total number of bookmarks for the post.
         """
         return self.bookmarks.count()
+
+
+class Comment(models.Model):
+    """
+    Model representing a comment on a post.
+    """
+    post = models.ForeignKey(
+        Post, on_delete=models.CASCADE, related_name="comments")
+    author = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name="commenter")
+    body = models.TextField()
+    approved = models.BooleanField(default=False)
+    created_on = models.DateTimeField(auto_now_add=True)
+    updated_on = models.DateTimeField(auto_now=True)
+    
+    class Meta:
+        ordering = ["-created_on"]
+
+    def __str__(self):
+        return f"Comment {self.body} by {self.author}"
+

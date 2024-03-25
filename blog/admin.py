@@ -9,7 +9,7 @@ class PostAdmin(SummernoteModelAdmin):
     field filters, fields to prepopulate, and rich-text editor.
     """
 
-    list_display = ('title', 'slug', 'author', 'category', 'status', 'created_on', 'updated_on',)
+    list_display = ('title', 'slug', 'author', 'category', 'status', 'approved', 'created_on', 'updated_on',)
     search_fields = ['title', 'content',]  
     list_filter = ('status', 'created_on', 'updated_on', 'author__username', 'category',) 
     prepopulated_fields = {'slug': ('title',)}

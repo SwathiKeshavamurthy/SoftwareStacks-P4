@@ -159,3 +159,37 @@ body {
 .approval {
     color: rgb(222, 146, 168);
 }
+
+.custom-brand .brand {
+    font-family: 'Lato', sans-serif; 
+    font-size: 1.8rem; 
+    font-weight: bold; 
+    color: #333; 
+}
+
+.custom-brand .red-o {
+    color: #E84610; 
+    font-size: 2rem; 
+}
+
+.custom-brand .thin {
+    font-weight: 300; 
+    color: #555; 
+}
+
+/* Adding a hover effect for interactivity */
+.custom-brand:hover .brand,
+.custom-brand:focus .brand {
+    color: #000; 
+    text-decoration: none; 
+}
+
+.custom-brand:hover .red-o,
+.custom-brand:focus .red-o {
+    color: #FF5733; 
+}
+
+.custom-brand:hover .thin,
+.custom-brand:focus .thin {
+    color: #777; 
+}

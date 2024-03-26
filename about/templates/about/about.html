@@ -3,21 +3,55 @@
 {% load static %}
 <div class="container mt-5">
   <div class="row">
-    <div class="col-4 text-center">
-      <img src="{% static 'images/nobody.jpg' %}" width="75%" />
-    </div>
-    <div class="col-8">
-      <!-- Title goes between these h2 tags -->
-      <h2>{{ about.title }}</h2>
-      <!-- Content goes directly underneath this -->
-      {{ about.content | safe }}
+    <div class="col">
+      <img src="{% static 'images/nobody.jpg' %}" class="img-fluid" alt="Nobody" />
     </div>
   </div>
-  <div class="row">
-    <div class="col text-right">
-      <!-- Updated on field goes in here -->
-
-      <p class="text-end"><em>Updated on: {{ about.updated_on }}</em></p>
+  <div class="row mt-4">
+    <div class="col">
+      
+      <h2>About Software Stacks</h2>
+     
+      <p>
+        Welcome to Software Stacks, your digital compass in the vast and ever-evolving universe of technology. At the core of our mission lies a commitment to demystifying the complex world of software development, e-commerce, and predictive analysis. Software Stacks serves as a conduit for knowledge, innovation, and community for enthusiasts, professionals, and anyone in between who seeks to harness the power of technology to shape the future.
+      </p>
+      <h3>Our Vision</h3>
+      <p>
+        In an age where technology infiltrates every facet of our lives, staying ahead of the curve is not just an advantage—it's a necessity. Software Stacks was conceived as a beacon for those navigating the digital seas, offering insights, guidance, and resources. Our vision is to empower you with the knowledge and tools needed to excel in the dynamic realms of web development, online commerce, and data science.
+      </p>
+      <h3>What We Offer</h3>
+      <p>
+        Software Stacks is structured around three main pillars, each representing a cornerstone of modern digital development:
+      </p>
+      <h6>Advanced Front-End Development</h6>
+      <p>
+        The front end is where code meets the canvas, creating the user-facing side of the web. We dive deep into the latest trends, frameworks, and best practices in front-end development, covering everything from responsive design to the newest JavaScript libraries that are shaping the future of web development.
+      </p>
+      <h6>E-Commerce</h6>
+      <p>
+        The digital marketplace offers boundless opportunities for growth and innovation. We explore the strategies, platforms, and technologies that drive successful e-commerce ventures. From setting up your online store to optimizing conversion rates and implementing cutting-edge payment solutions, we cover the A to Z of e-commerce to help you thrive in the competitive online retail space.
+      </p>
+      <h6>Predictive Analysis</h6>
+      <p>
+        In the age of big data, predictive analysis stands out as a key driver of decision-making and strategic planning. Our content demystifies the concepts and techniques behind predictive modeling, machine learning, and data analytics, offering insights into how businesses can leverage data to forecast trends, improve customer experiences, and gain a competitive edge.
+      </p>
+      <h3>Stay Connected</h3>
+        <p>
+        Navigating our website, it is designed with you in mind, offering easy navigation through a wealth of resources. 
+        <p>In the footer, you’ll find links to our social media platforms. Follow us to stay connected with the Software Stacks community, get real-time updates, share insights, and be part of the conversation shaping the future of technology.</p>
+        </p>
+      <p>
+        Software Stacks is more than just a blog—it's a community dedicated to exploring the potential of technology to transform our world. Whether you're a seasoned developer, a budding entrepreneur, or simply a tech enthusiast, you'll find valuable resources, inspiration, and a like-minded community here at Software Stacks.
+      </p>
+      <p>
+        Embark on this journey with us, as we navigate the ever-changing landscape of digital technology, together.
+      </p>
+    </div>
+  </div>
+  <div class="row mt-4">
+    <div class="col text-end">
+     
+      <p><em>Updated on: March 26, 2024, 2:48 a.m.</em></p>
     </div>
   </div>
 </div>

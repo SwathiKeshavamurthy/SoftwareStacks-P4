@@ -76,7 +76,7 @@
                             {{ user.username }}
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">My Bookmarks</a></li>
+                            <li><a class="dropdown-item" href="{% url 'bookmarked_posts' %}">My Bookmarks</a></li>
                             <li><a class="dropdown-item" href="#">My Likes</a></li>
                             <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a></li>

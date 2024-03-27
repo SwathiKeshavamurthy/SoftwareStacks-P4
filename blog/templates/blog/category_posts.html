@@ -1,15 +1,38 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
+{% load static %}
 
 {% block content %}
-<div class="container">
-    <h1>Posts in "{{ category_name }}" Category</h1>
-    {% for post in posts %}
-        <div class="post">
-            <h2>{{ post.title }}</h2>
-            <!-- Add more post details here -->
-            <p>{{ post.excerpt }}</p>
-            <a href="{% url 'post_detail' post.slug %}">Read more...</a>
+<div class="container-fluid">
+    <div class="row">
+        <h1>Posts in "{{ category_name }}" Category</h1>
+        <div class="col-12 mt-3">
+            <div class="row">
+
+                {% for post in posts %}
+                <div class="col-md-3">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <div class="image-container">
+                                <div class="image-flash">
+                                    <p class="author">Author: {{ post.author }}</p>
+                                </div>
+                            </div>
+                            <a href="{% url 'post_detail' post.slug %}" class="post-link">
+                                <h2 class="card-title">{{ post.title }}</h2>
+                                <p class="card-text">{{ post.excerpt }}</p>
+                            </a>
+                            <hr />
+                            <p class="card-category text-muted h6">{{ post.category }}</p>
+                            <p class="card-text text-muted h6">{{ post.created_on }}</p>
+                        </div>
+                    </div>
+                </div>
+                {% if forloop.counter|divisibleby:4 and not forloop.last %}
+            </div>
+            <div class="row">
+                {% endif %}
+                {% endfor %}
+            </div>
         </div>
-    {% endfor %}
-</div>
-{% endblock %}
+    </div>
+    {% endblock %}

@@ -43,3 +43,8 @@ def bookmarked_posts(request):
     # Fetch all posts that have been bookmarked by the current user
     posts = Post.objects.filter(bookmarks=request.user).order_by('-created_on')
     return render(request, 'blog/bookmarked_posts.html', {'posts': posts})
+
+def liked_posts(request):
+    # Fetch all posts that have been liked by the current user
+    posts = Post.objects.filter(likes=request.user).order_by('-created_on')
+    return render(request, 'blog/liked_posts.html', {'posts': posts})

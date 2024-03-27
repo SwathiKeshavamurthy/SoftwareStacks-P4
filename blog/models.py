@@ -28,8 +28,8 @@ class Post(models.Model):
     status = models.IntegerField(choices=STATUS, default=0)
     excerpt = models.TextField(blank=True)
     approved = models.BooleanField(default=False)
-    likes = models.ManyToManyField(User, related_name="likes_post", blank=True)
-    bookmarks = models.ManyToManyField(User, related_name="bookmarks_post", blank=True)
+    likes = models.ManyToManyField(User, related_name="liked_post", blank=True)
+    bookmarks = models.ManyToManyField(User, related_name="bookmarked_post", blank=True)
 
     class Meta:
         ordering = ['-created_on']

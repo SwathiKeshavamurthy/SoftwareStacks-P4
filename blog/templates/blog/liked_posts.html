@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <h1>Posts I Like</h1>
+    {% if posts %}
+        {% for post in posts %}
+            <div class="post">
+                <h2><a href="{% url 'post_detail' post.slug %}">{{ post.title }}</a></h2>
+                <p>{{ post.excerpt }}</p>
+                <!-- Add more details as you see fit -->
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>You haven't liked any posts yet.</p>
+    {% endif %}
+</div>
+{% endblock %}

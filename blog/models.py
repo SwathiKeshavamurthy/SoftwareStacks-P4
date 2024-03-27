@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.utils.text import slugify
 
 # Constants for the Post model choices
 STATUS = (
@@ -8,9 +9,9 @@ STATUS = (
 )
 
 CATEGORY_CHOICES = [
-    ('front-end development', 'Front-End Development'),
+    ('front-end-development', 'Front-End Development'),
     ('e-commerce', 'E-Commerce'),
-    ('predictive analytics', 'Predictive Analytics'),
+    ('predictive-analytics', 'Predictive Analytics'),
 ]
 
 class Post(models.Model):
@@ -67,4 +68,18 @@ class Comment(models.Model):
 
     def __str__(self):
         return f"Comment {self.body} by {self.author}"
+
+
+
+class Category(models.Model):
+    name = models.CharField(max_length=100)
+    slug = models.SlugField(unique=True)
+
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.name)
+        super().save(*args, **kwargs)
+
+    def __str__(self):
+        return self.name
+
 

@@ -30,3 +30,11 @@ def post_detail(request, slug):
         "blog/post_detail.html",
         {"post": post},
     )
+
+def category_posts(request, category_name):
+    posts = Post.objects.filter(category=category_name, status=1).order_by('-created_on')
+    context = {
+        'category_name': category_name,
+        'posts': posts
+    }
+    return render(request, 'blog/category_posts.html', context)

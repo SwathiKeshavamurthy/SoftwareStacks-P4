@@ -57,8 +57,15 @@
                 <li class="nav-item">
                     <a class="nav-link {% if request.path == home_url %}active{% endif %}" aria-current="page" href="{% url 'home' %}">Home</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link {% if request.path == category_url %}active{% endif %}" aria-current="page" href="#">Category</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Categories
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item" href="{% url 'category_posts' 'front-end-development' %}">Front-End Development</a></li>
+                        <li><a class="dropdown-item" href="{% url 'category_posts' 'e-commerce' %}">E-Commerce</a></li>
+                        <li><a class="dropdown-item" href="{% url 'category_posts' 'predictive-analytics' %}">Predictive Analysis</a></li>
+                    </ul>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link {% if request.path == about_url %}active{% endif %}" aria-current="page" href="{% url 'about' %}">About & Contact</a>

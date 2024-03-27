@@ -38,3 +38,8 @@ def category_posts(request, category_name):
         'posts': posts
     }
     return render(request, 'blog/category_posts.html', context)
+
+def bookmarked_posts(request):
+    # Fetch all posts that have been bookmarked by the current user
+    posts = Post.objects.filter(bookmarks=request.user).order_by('-created_on')
+    return render(request, 'blog/bookmarked_posts.html', {'posts': posts})

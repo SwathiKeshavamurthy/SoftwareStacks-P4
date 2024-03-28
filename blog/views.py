@@ -4,7 +4,7 @@ from django.views.decorators.http import require_POST
 from django.shortcuts import render, get_object_or_404
 from django.views import generic
 from django.contrib import messages
-from .models import Post
+from .models import Post, Comment
 from .forms import CommentForm
 
 class PostList(generic.ListView):
@@ -103,3 +103,11 @@ def toggle_like(request):
         post.likes.add(request.user)
         liked = True
     return JsonResponse({'liked': liked})
+
+@login_required
+def commented_posts(request):
+    if request.method == 'GET':
+        # Retrieve posts commented by the current user
+        commented_post_ids = Comment.objects.filter(author=request.user).values_list('post_id', flat=True)
+        posts = Post.objects.filter(id__in=commented_post_ids).order_by('-created_on')
+        return render(request, 'blog/commented_posts.html', {'posts': posts})

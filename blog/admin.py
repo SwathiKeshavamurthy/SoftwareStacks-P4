@@ -11,8 +11,16 @@ class PostAdmin(SummernoteModelAdmin):
 
     list_display = ('title', 'slug', 'author', 'category', 'status', 'approved', 'created_on', 'updated_on',)
     search_fields = ['title', 'content',]  
-    list_filter = ('status', 'created_on', 'updated_on', 'author__username', 'category',) 
+    list_filter = ('status', 'approved', 'created_on', 'updated_on', 'author__username', 'category',) 
     prepopulated_fields = {'slug': ('title',)}
     summernote_fields = ('content',)
 
-admin.site.register(Comment)
+@admin.register(Comment)
+class CommentAdmin(admin.ModelAdmin):
+    """
+    Customize the admin list view for Comment model to include
+    display of post, author, and approval status.
+    """
+    list_display = ('post', 'author', 'approved', 'created_on',)
+    list_filter = ('approved', 'created_on', 'author')
+    search_fields = ('body', 'author__username', 'post__title',)

@@ -7,6 +7,7 @@ from django.views import generic
 from django.contrib import messages
 from .models import Post, Comment
 from .forms import CommentForm
+from django.db.models import Q
 
 class PostList(generic.ListView):
     queryset = Post.objects.filter(status=1)
@@ -155,3 +156,15 @@ def comment_delete(request, slug, comment_id):
         messages.add_message(request, messages.ERROR, 'You can only delete your own comments!')
 
     return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+
+def search_posts(request):
+    query = request.GET.get('q')
+    if query:
+        posts = Post.objects.filter(
+            Q(title__icontains=query) | Q(content__icontains=query),
+            status=1
+        ).distinct()
+    else:
+        posts = Post.objects.none()  # Return an empty QuerySet if no query is specified
+
+    return render(request, 'blog/search_results.html', {'posts': posts, 'query': query})

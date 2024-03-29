@@ -26,10 +26,6 @@
                             <hr />
                             <p class="card-category text-muted h6">{{ post.category }}</p>
                             <p class="card-text text-muted h6">{{ post.created_on }}</p>
-                            <div class="icons float-end">
-                                <a href="#" class="like-icon" data-post-id="{{ post.id }}"><i class="fas fa-heart"></i></a>
-                                <a href="#" class="bookmark-icon" data-post-id="{{ post.id }}"><i class="fas fa-bookmark"></i></a>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -57,6 +53,4 @@
     </nav>
     {% endif %}
 </div>
-<script src="{% static 'blog/js/likes-and-bookmarks.js' %}"></script>
-<!-- index.html content ends here -->
 {% endblock %}

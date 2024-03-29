@@ -1,7 +1,7 @@
 from django.http import JsonResponse
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.http import require_POST
-from django.shortcuts import render, get_object_or_404, reverse
+from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.http import HttpResponseRedirect
 from django.views import generic
 from django.contrib import messages
@@ -72,19 +72,21 @@ def bookmarked_posts(request):
         posts = Post.objects.filter(bookmarks=request.user).order_by('-created_on')
         return render(request, 'blog/bookmarked_posts.html', {'posts': posts})
 
-@require_POST
 @login_required
 def toggle_bookmark(request, post_id):
     if request.method == 'POST':
-        post = get_object_or_404(Post, id=post_id)
-        if post.bookmarks.filter(id=request.user.id).exists():
+        post = get_object_or_404(Post, pk=post_id)
+        if post.bookmarks.filter(pk=request.user.pk).exists():
             post.bookmarks.remove(request.user)
-            return JsonResponse({'status': 'removed'})
+            message = "Bookmark removed"
         else:
             post.bookmarks.add(request.user)
-            return JsonResponse({'status': 'added'})
-    else:
-        return redirect('some-view-name')
+            message = "Post bookmarked"
+        if request.is_ajax():
+            return JsonResponse({"message": message})
+        else:
+            messages.add_message(request, messages.SUCCESS, message)
+            return redirect('post_detail', slug=post.slug)
 
 @login_required
 def liked_posts(request):
@@ -93,17 +95,20 @@ def liked_posts(request):
         return render(request, 'blog/liked_posts.html', {'posts': posts})
 
 @login_required
-@require_POST
-def toggle_like(request):
-    post_id = request.POST.get('post_id')
-    post = get_object_or_404(Post, id=post_id)
-    if post.likes.filter(id=request.user.id).exists():
-        post.likes.remove(request.user)
-        liked = False
-    else:
-        post.likes.add(request.user)
-        liked = True
-    return JsonResponse({'liked': liked})
+def toggle_like(request, post_id):
+    if request.method == 'POST':
+        post = get_object_or_404(Post, pk=post_id)
+        if post.likes.filter(pk=request.user.pk).exists():
+            post.likes.remove(request.user)
+            message = "Like removed"
+        else:
+            post.likes.add(request.user)
+            message = "Post liked"
+        if request.is_ajax():
+            return JsonResponse({"message": message})
+        else:
+            messages.add_message(request, messages.SUCCESS, message)
+            return redirect('post_detail', slug=post.slug)
 
 @login_required
 def commented_posts(request):

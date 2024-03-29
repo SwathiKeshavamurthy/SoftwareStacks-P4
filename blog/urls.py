@@ -6,9 +6,9 @@ from .views import toggle_bookmark, toggle_like
 urlpatterns = [
     path('', views.PostList.as_view(), name='home'),
     path('my-bookmarks/', bookmarked_posts, name='bookmarked_posts'),
-    path('toggle-bookmark/', views.toggle_bookmark, name='toggle_bookmark'),
     path('my-likes/', liked_posts, name='liked_posts'),
-    path('toggle-like/', views.toggle_like, name='toggle_like'),
+    path('toggle-like/<int:post_id>/', views.toggle_like, name='toggle_like'),
+    path('toggle-bookmark/<int:post_id>/', views.toggle_bookmark, name='toggle_bookmark'),
     path('category/<slug:category_name>/', category_posts, name='category_posts'),
     path('commented-posts/', views.commented_posts, name='commented_posts'),
     path('<slug:slug>/', views.post_detail, name='post_detail'),

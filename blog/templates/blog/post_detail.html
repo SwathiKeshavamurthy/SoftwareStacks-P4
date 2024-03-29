@@ -39,6 +39,8 @@
     <div class="col-12">
       <strong class="text-secondary">
         <i class="far fa-comments"></i> {{ comment_count }}
+        <a href="#" class="like-post ms-3" data-post-id="{{ post.id }}"><i class="far fa-heart"></i></a>
+        <a href="#" class="bookmark-post ms-2" data-post-id="{{ post.id }}"><i class="far fa-bookmark"></i></a>
       </strong>
     </div>
     <div class="col-12">
@@ -119,5 +121,6 @@
 {% endblock content %}
 
 {% block extras %}
+<script src="{% static 'blog/js/likes-and-bookmarks.js' %}"></script>
 <script src="{% static 'js/comments.js' %}"></script>
 {% endblock %}

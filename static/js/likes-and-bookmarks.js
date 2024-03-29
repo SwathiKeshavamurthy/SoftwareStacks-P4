@@ -1,29 +1,38 @@
 document.addEventListener("DOMContentLoaded", function() {
-    document.querySelectorAll('.like-icon').forEach(item => {
-        item.addEventListener('click', function(e) {
+    const likeButtons = document.querySelectorAll('.like-post');
+    const bookmarkButtons = document.querySelectorAll('.bookmark-post');
+
+    const csrftoken = getCookie('csrftoken'); // Function to get CSRF token from cookies
+
+    likeButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
             e.preventDefault();
-            const postId = this.getAttribute('data-post-id');
-            fetch('{% url 'toggle_like' %}', {
-                method: 'POST',
-                headers: {
-                    'X-CSRFToken': getCookie('csrftoken'), 
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ post_id: postId })
-            })
-            .then(response => response.json())
-            .then(data => {
-                if(data.liked) {
-                    this.classList.add('liked'); 
-                } else {
-                    this.classList.remove('liked');
-                }
-            })
-            .catch((error) => {
-                console.error('Error:', error);
-            });
+            toggleAction('toggle-like', this.dataset.postId, csrftoken);
         });
     });
+
+    bookmarkButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            toggleAction('toggle-bookmark', this.dataset.postId, csrftoken);
+        });
+    });
+
+    function toggleAction(action, postId, csrftoken) {
+        fetch(`/${action}/${postId}/`, {
+            method: 'POST',
+            headers: {
+                'X-CSRFToken': csrftoken,
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({'post_id': postId})
+        })
+        .then(response => response.json())
+        .then(data => {
+            alert(data.message); // Display message from server
+            // Optionally, update UI based on action (e.g., change icon color)
+        });
+    }
 });
 
 function getCookie(name) {

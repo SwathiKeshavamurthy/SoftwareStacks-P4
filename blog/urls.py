@@ -12,8 +12,8 @@ urlpatterns = [
     path('category/<slug:category_name>/', category_posts, name='category_posts'),
     path('commented-posts/', views.commented_posts, name='commented_posts'),
     path('<slug:slug>/', views.post_detail, name='post_detail'),
-    path('<slug:slug>/edit_comment/<int:comment_id>',
-         views.comment_edit, name='comment_edit'),
+    path('<slug:slug>/edit_comment/<int:comment_id>/', views.comment_edit, name='comment_edit'),
+    path('<slug:slug>/delete_comment/<int:comment_id>', views.comment_delete, name='comment_delete'),
 ]
     
     

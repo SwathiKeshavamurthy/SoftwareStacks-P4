@@ -2,22 +2,24 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.utils.text import slugify
 
-# Constants for the Post model choices
-STATUS = (
-    (0, "Draft"),
-    (1, "Published"),
-)
-
-CATEGORY_CHOICES = [
-    ('front-end-development', 'Front-End Development'),
-    ('e-commerce', 'E-Commerce'),
-    ('predictive-analytics', 'Predictive Analytics'),
-]
 
 class Post(models.Model):
     """
     Model representing a blog post.
     """
+
+    # Constants for the Post model choices
+    STATUS = (
+        (0, "Draft"),
+        (1, "Published"),
+    )
+
+    CATEGORY_CHOICES = [
+        ('front-end-development', 'Front-End Development'),
+        ('e-commerce', 'E-Commerce'),
+        ('predictive-analytics', 'Predictive Analytics'),
+    ]
+
     title = models.CharField(max_length=255, unique=True)
     slug = models.SlugField(max_length=255, unique=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='blog_posts')
@@ -70,7 +72,6 @@ class Comment(models.Model):
         return f"Comment {self.body} by {self.author}"
 
 
-
 class Category(models.Model):
     name = models.CharField(max_length=100)
     slug = models.SlugField(unique=True)
@@ -81,5 +82,3 @@ class Category(models.Model):
 
     def __str__(self):
         return self.name
-
-

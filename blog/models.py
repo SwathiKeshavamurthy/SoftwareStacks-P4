@@ -39,13 +39,13 @@ class Post(models.Model):
     def __str__(self):
         return f"The title of this post is {self.title}"
 
-    def total_likes(self):
+    def likes_count(self):
         """
         Returns the total number of likes for the post.
         """
         return self.likes.count()
 
-    def total_bookmarks(self):
+    def bookmarks_count(self):
         """
         Returns the total number of bookmarks for the post.
         """

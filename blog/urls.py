@@ -6,16 +6,12 @@ from .views import (
     liked_posts,
     commented_posts,
     search_posts,
-    toggle_bookmark,
-    toggle_like
 )
 
 urlpatterns = [
     path('', views.PostList.as_view(), name='home'),
     path('my-bookmarks/', bookmarked_posts, name='bookmarked_posts'),
     path('my-likes/', liked_posts, name='liked_posts'),
-    path('toggle-like/<int:post_id>/', toggle_like, name='toggle_like'),
-    path('toggle-bookmark/<int:post_id>/', toggle_bookmark, name='toggle_bookmark'),
     path('category/<slug:category_name>/', category_posts, name='category_posts'),
     path('commented-posts/', commented_posts, name='commented_posts'),
     path('search/', search_posts, name='search_posts'),

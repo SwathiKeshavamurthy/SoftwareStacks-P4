@@ -65,21 +65,6 @@ def bookmarked_posts(request):
         posts = Post.objects.filter(bookmarks=request.user).order_by('-created_on')
         return render(request, 'blog/bookmarked_posts.html', {'posts': posts})
 
-@login_required
-def toggle_bookmark(request, post_id):
-    if request.method == 'POST':
-        post = get_object_or_404(Post, pk=post_id)
-        if post.bookmarks.filter(pk=request.user.pk).exists():
-            post.bookmarks.remove(request.user)
-            message = "Bookmark removed"
-        else:
-            post.bookmarks.add(request.user)
-            message = "Post bookmarked"
-        if request.is_ajax():
-            return JsonResponse({"message": message})
-        else:
-            messages.add_message(request, messages.SUCCESS, message)
-            return redirect('post_detail', slug=post.slug)
 
 @login_required
 def liked_posts(request):
@@ -87,21 +72,6 @@ def liked_posts(request):
         posts = Post.objects.filter(likes=request.user).order_by('-created_on')
         return render(request, 'blog/liked_posts.html', {'posts': posts})
 
-@login_required
-def toggle_like(request, post_id):
-    if request.method == 'POST':
-        post = get_object_or_404(Post, pk=post_id)
-        if post.likes.filter(pk=request.user.pk).exists():
-            post.likes.remove(request.user)
-            message = "Like removed"
-        else:
-            post.likes.add(request.user)
-            message = "Post liked"
-        if request.is_ajax():
-            return JsonResponse({"message": message})
-        else:
-            messages.add_message(request, messages.SUCCESS, message)
-            return redirect('post_detail', slug=post.slug)
 
 @login_required
 def commented_posts(request):

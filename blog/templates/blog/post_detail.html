@@ -39,12 +39,27 @@
     <div class="col-12">
       <strong class="text-secondary">
         <i class="far fa-comments"></i> {{ comment_count }}
-        <span class="like-icon" data-post-id="{{ post.id }}">
-          <i class="far fa-heart"></i> {{ post.likes_count }}
+
+        <span class="like-icon {% if request.user in post.likes.all %}liked{% endif %}" data-post-id="{{ post.id }}"
+          data-authenticated="{% if user.is_authenticated %}true{% else %}false{% endif %}">
+          {% if request.user in post.likes.all %}
+          <i class="fas fa-heart"></i>
+          {% else %}
+          <i class="far fa-heart"></i>
+          {% endif %}
+          <span class="like-count">{{ post.likes_count }}</span>
         </span>
-        <span class="bookmark-icon" data-post-id="{{ post.id }}">
-          <i class="far fa-bookmark"></i> {{ post.bookmarks_count }}
+        
+        <span class="bookmark-icon {% if request.user in post.bookmarks.all %}bookmarked{% endif %}"
+          data-post-id="{{ post.id }}" data-authenticated="{% if user.is_authenticated %}true{% else %}false{% endif %}">
+          {% if request.user in post.bookmarks.all %}
+          <i class="fas fa-bookmark"></i>
+          {% else %}
+          <i class="far fa-bookmark"></i>
+          {% endif %}
+          <span class="bookmark-count">{{ post.bookmarks_count }}</span>
         </span>
+
       </strong>
     </div>
     <div class="col-12">
@@ -121,9 +136,11 @@
   </div>
 </div>
 </div>
-
+<!-- Include jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 {% endblock content %}
 
 {% block extras %}
 <script src="{% static 'js/comments.js' %}"></script>
+<script src="{% static 'js/like_bookmark.js' %}"></script>
 {% endblock %}

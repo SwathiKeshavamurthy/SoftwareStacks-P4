@@ -72,7 +72,40 @@ def liked_posts(request):
         posts = Post.objects.filter(likes=request.user).order_by('-created_on')
         return render(request, 'blog/liked_posts.html', {'posts': posts})
 
+@login_required
+def like_post(request):
+    if request.method == 'POST':
+        post_id = request.POST.get('post_id')
+        post = Post.objects.get(id=post_id)
+        if post.likes.filter(id=request.user.id).exists():
+            post.likes.remove(request.user)
+            liked = False
+            message = 'Post unliked.'
+        else:
+            post.likes.add(request.user)
+            liked = True
+            message = 'Post liked.'
+        return JsonResponse({'liked': liked, 'likes_count': post.likes.count(), 'message': message})
+    else:
+        return JsonResponse({'error': 'Invalid request method'})
 
+@login_required
+def bookmark_post(request):
+    if request.method == 'POST':
+        post_id = request.POST.get('post_id')
+        post = Post.objects.get(id=post_id)
+        if request.user in post.bookmarks.all():
+            post.bookmarks.remove(request.user)
+            bookmarked = False
+            message = 'Post bookmark removed.'
+        else:
+            post.bookmarks.add(request.user)
+            bookmarked = True
+            message = 'Post bookmarked.'
+        return JsonResponse({'bookmarked': bookmarked, 'bookmarks_count': post.bookmarks.count(), 'message': message})
+    else:
+        return JsonResponse({'error': 'Invalid request method'})
+        
 @login_required
 def commented_posts(request):
     if request.method == 'GET':

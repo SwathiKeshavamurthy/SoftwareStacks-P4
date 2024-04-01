@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <h1>Your Posts</h1>
+    {% if posts %}
+        {% for post in posts %}
+            {% if post.author == request.user %}
+                <div class="post">
+                    <h2><a href="{% url 'post_detail' post.slug %}">{{ post.title }}</a></h2>
+                    <p>{{ post.excerpt }}</p>
+                    <!-- Add more details as you see fit -->
+                </div>
+            {% endif %}
+        {% endfor %}
+    {% else %}
+        <p>You haven't created any posts yet.</p>
+    {% endif %}
+</div>
+{% endblock %}

@@ -73,6 +73,12 @@ def liked_posts(request):
         return render(request, 'blog/liked_posts.html', {'posts': posts})
 
 @login_required
+def user_posts(request):
+    if request.method == 'GET':
+        posts = Post.objects.filter(author=request.user).order_by('-created_on')
+        return render(request, 'blog/user_posts.html', {'posts': posts})
+
+@login_required
 def like_post(request):
     if request.method == 'POST':
         post_id = request.POST.get('post_id')

@@ -6,7 +6,7 @@ body {
     font-family: Lato, sans-serif;
     font-size: 1.4rem;
     font-weight: 700;
-    color: #4A4A4F;
+    color: #ffffff;
 }
 
 .red-o {
@@ -22,11 +22,15 @@ body {
 }
 
 .dark-bg {
-    background-color: #042d59;
+    background-color: #003459;
 }
 
 .main-bg {
-    background-color: #F9FAFC;
+    background-color: #FFFFFF;
+}
+
+.main-content {
+    color: #00171F !important;
 }
 
 .card {
@@ -34,8 +38,34 @@ body {
     background-color: transparent;
 }
 
+.custom-brand .brand {
+    color: white !important;
+}
+
+.custom-brand:hover .brand {
+    color: #007EA7 !important;
+}
+
+.navbar-nav .nav-link,
+.navbar-brand {
+    color: #ffffff !important;  
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-brand:hover,
+.navbar-toggler-icon:hover {
+    color: #007EA7 !important;  
+}
+
 .image-container {
     position: relative;
+}
+
+.container .img-fluid {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    display: block;
 }
 
 .image-flash {
@@ -67,7 +97,7 @@ body {
 }
 
 .masthead-text {
-    background-color: #445261;
+    background-color: #00171F;
     color: white;
     position: relative;
 }
@@ -93,12 +123,12 @@ body {
 
 .post-link {
     text-decoration: none;
-    color: #445261;
+    color: #00171F;
 }
 
 .post-link:hover,
 .page-link {
-    color: #1255cf;
+    color: #007EA7;
 }
 
 .post-title {
@@ -167,29 +197,26 @@ body {
     color: #333; 
 }
 
-.custom-brand .red-o {
-    color: #E84610; 
-    font-size: 2rem; 
+.custom-search-btn {
+    color: white !important; 
+    border-color: white !important; 
 }
 
-.custom-brand .thin {
-    font-weight: 300; 
-    color: #555; 
+.custom-search-btn:hover {
+    color: white !important; 
+    background-color: #007EA7 !important; 
+    border-color: white !important; 
 }
 
-/* Adding a hover effect for interactivity */
-.custom-brand:hover .brand,
-.custom-brand:focus .brand {
-    color: #000; 
-    text-decoration: none; 
+.footer a {
+    color: #ffffff;
+    transition: color 0.3s;
 }
 
-.custom-brand:hover .red-o,
-.custom-brand:focus .red-o {
-    color: #FF5733; 
+.card-color {
+    color: #007EA7;
 }
 
-.custom-brand:hover .thin,
-.custom-brand:focus .thin {
-    color: #777; 
+.footer a:hover {
+    color: #007EA7;
 }

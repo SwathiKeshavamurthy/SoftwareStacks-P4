@@ -9,7 +9,7 @@
             <div class="col-md-4 mb-4"> <!-- Added bottom margin for each post -->
                 <div class="card h-100"> <!-- Use card to encapsulate each post -->
                     <div class="card-body">
-                        <h3 class="card-title"><a href="{% url 'post_detail' post.slug %}">{{ post.title }}</a></h3>
+                        <h3 class="card-title card-color"><a href="{% url 'post_detail' post.slug %}">{{ post.title }}</a></h3>
                         <p class="card-text">{{ post.excerpt }}</p>
                     </div>
                 </div>

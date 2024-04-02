@@ -59,6 +59,7 @@ def category_posts(request, category_name):
     }
     return render(request, 'blog/category_posts.html', context)
 
+
 @login_required
 def add_post(request):
     return render(request, 'add_post.html')  

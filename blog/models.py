@@ -21,15 +21,23 @@ class Post(models.Model):
         ('predictive-analytics', 'Predictive Analytics'),
     ]
 
+    REVIEW_STATUS = (
+        ('pending', 'Pending'),
+        ('rejected', 'Rejected'),
+        ('accepted', 'Accepted'),
+    )
+
     title = models.CharField(max_length=255, unique=True)
     slug = models.SlugField(max_length=255, unique=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='blog_posts')
+    featured_image = CloudinaryField('image', default='placeholder')
     content = models.TextField()
     category = models.CharField(max_length=50, choices=CATEGORY_CHOICES, default='front-end development')
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
     status = models.IntegerField(choices=STATUS, default=0)
     excerpt = models.TextField(blank=True)
+    post_review_status = models.CharField(max_length=10, choices=REVIEW_STATUS, default='pending')
     approved = models.BooleanField(default=False)
     likes = models.ManyToManyField(User, related_name="liked_post", blank=True)
     bookmarks = models.ManyToManyField(User, related_name="bookmarked_post", blank=True)

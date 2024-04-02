@@ -60,6 +60,10 @@ def category_posts(request, category_name):
     return render(request, 'blog/category_posts.html', context)
 
 @login_required
+def add_post(request):
+    return render(request, 'add_post.html')  
+
+@login_required
 def bookmarked_posts(request):
     if request.method == 'GET':
         posts = Post.objects.filter(bookmarks=request.user).order_by('-created_on')

@@ -60,6 +60,20 @@ class Post(models.Model):
         """
         return self.bookmarks.count()
 
+    def save(self, *args, **kwargs):
+        # If the instance doesn't have a slug or the title has changed and the slug is based on the title
+        if not self.slug or slugify(self.title) != self.slug:
+            self.slug = original_slug = slugify(self.title)
+            # Ensure the slug is unique
+            for x in range(1, 100):  # Arbitrary limit to prevent infinite loops
+                if not Post.objects.filter(slug=self.slug).exists():
+                    break
+                self.slug = f'{original_slug}-{x}'
+            else:
+                # As a last resort, append the length of posts to ensure uniqueness
+                self.slug = f'{original_slug}-{Post.objects.annotate(text_len=Length('title')).count()}'
+        super(Post, self).save(*args, **kwargs)
+
 
 class Comment(models.Model):
     """

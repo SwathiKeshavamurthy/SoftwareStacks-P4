@@ -1,13 +1,13 @@
-from django.http import JsonResponse
+from django.http import JsonResponse, Http404, HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.http import require_POST
-from django.shortcuts import render, get_object_or_404, reverse, redirect
-from django.http import HttpResponseRedirect
+from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.views import generic
 from django.contrib import messages
 from .models import Post, Comment
-from .forms import CommentForm
+from .forms import CommentForm, PostForm
 from django.db.models import Q
+from django.db import IntegrityError
 
 class PostList(generic.ListView):
     queryset = Post.objects.filter(status=1)
@@ -16,12 +16,13 @@ class PostList(generic.ListView):
 
 
 def post_detail(request, slug):
-    queryset = Post.objects.filter(status=1)
-    post = get_object_or_404(queryset, slug=slug)
+    post = get_object_or_404(Post, slug=slug)
+    if post.status != 1 and post.author != request.user:
+        raise Http404("Post not found or not published")
     comments = post.comments.all().order_by("-created_on")
     comment_count = post.comments.filter(approved=True).count()
-    likes_count = post.likes.count()  # Assuming 'likes' is a ManyToManyField for users
-    bookmarks_count = post.bookmarks.count()  # Assuming 'bookmarks' is a ManyToManyField for users
+    likes_count = post.likes.count()
+    bookmarks_count = post.bookmarks.count()
 
     if request.method == "POST":
         comment_form = CommentForm(data=request.POST)
@@ -51,6 +52,7 @@ def post_detail(request, slug):
             "comment_form": comment_form,
         },
     )
+
 def category_posts(request, category_name):
     posts = Post.objects.filter(category=category_name, status=1).order_by('-created_on')
     context = {
@@ -59,10 +61,6 @@ def category_posts(request, category_name):
     }
     return render(request, 'blog/category_posts.html', context)
 
-
-@login_required
-def add_post(request):
-    return render(request, 'add_post.html')  
 
 @login_required
 def bookmarked_posts(request):
@@ -174,3 +172,21 @@ def search_posts(request):
         posts = Post.objects.none()  # Return an empty QuerySet if no query is specified
 
     return render(request, 'blog/search_results.html', {'posts': posts, 'query': query})
+
+
+@login_required
+def add_post(request):
+    if request.method == 'POST':
+        form = PostForm(request.POST, request.FILES)
+        if form.is_valid():
+            new_post = form.save(commit=False)
+            new_post.author = request.user
+            # Assume all posts require approval, so we don't set it as approved yet
+            # new_post.approved = False (if you have such a field and want to explicitly set it)
+            new_post.save()
+            # Add a success message
+            messages.success(request, 'Post added successfully and is awaiting approval.')
+            return redirect('home')  # Redirect to a relevant page
+    else:
+        form = PostForm()
+    return render(request, 'blog/add_post.html', {'form': form})

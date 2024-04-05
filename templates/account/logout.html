@@ -5,6 +5,18 @@
 {% block title %}{% trans "Sign Out" %}{% endblock title %}
 
 {% block content %}
+<style>
+  .btn-custom-logout {
+    background-color: #003459;
+    color: white;
+    transition: background-color 0.3s ease;
+  }
+
+  .btn-custom-logout:hover {
+    background-color: #007EA7;
+    color: white;
+  }
+</style>
 
 <div class="container text-center p-5">
   <h1>{% trans "Sign Out" %}</h1>
@@ -16,7 +28,8 @@
     {% if redirect_field_value %}
     <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
     {% endif %}
-    <button class="btn btn-dark w-50 mb-2" type="submit">{% trans 'Sign Out' %}</button>
+    <!-- Apply the custom style for the Sign Out button -->
+    <button class="btn btn-custom-logout w-50 mb-2" type="submit">{% trans 'Sign Out' %}</button>
   </form>
 </div>
 

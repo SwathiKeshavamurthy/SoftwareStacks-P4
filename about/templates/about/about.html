@@ -8,7 +8,7 @@
 <div class="container mt-5">
   <div class="row">
     <div class="col">
-      <img src="{% static 'images/nobody.jpg' %}" class="img-fluid" alt="All 3 Category Software Stack Image">
+      <img src="{% static 'images/nobody.jpg' %}" class="img-fluid custom-img-height" alt="All 3 Category Software Stack Image">
     </div>
   </div>
   <div class="row mt-4">
@@ -58,15 +58,25 @@
       <p><em>Updated on: March 26, 2024, 2:48 a.m.</em></p>
     </div>
   </div>
-  <div class="row justify-content-center">
-    <div class="col-12 col-md-6 my-5">
+  <div class="row mt-4 justify-content-center">
+    <div class="col-12 col-md-8 my-5">
         <h2 class="text-center">Contact Us!</h2>
-        <p></p>
+        <p class="text-center">
+          At Software Stacks, we believe in the power of communication to foster innovation and collaboration. Whether you have
+          questions about our content, suggestions for topics you’d love to see covered, or insights into the tech world you’d
+          like to share, we’re here to listen.
+        </p>
+        <p class="text-center">
+          Your feedback drives us forward. Reach out for inquiries, collaborations, or even just to say hello. Let's build the
+          future of technology together.
+        </p>
         <form method="post">
           {{ contact_form | crispy }}
           {% csrf_token %}
-          <button class="btn btn-secondary"
+          <div class="d-flex justify-content-center">
+          <button class="btn btn-custom w-50 mb-4"
             type="submit">Submit</button>
+          </div>
         </form>
     </div>
 </div>

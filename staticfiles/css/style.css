@@ -220,3 +220,14 @@ body {
 .footer a:hover {
     color: #007EA7;
 }
+
+.btn-custom {
+    background-color: #003459;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.btn-custom:hover {
+    background-color: #007EA7;
+    color: white;
+}

@@ -1,15 +1,17 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class="container">
-    <h2>{{ form.instance.pk|yesno:"Edit Post,Add New Post" }}</h2> <!-- Dynamically changes the heading -->
-    <form method="post" enctype="multipart/form-data">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit" class="btn btn-primary">{{ form.instance.pk|yesno:"Update,Submit" }}</button>
-        {% if form.instance.pk %} <!-- Show a Cancel button only when editing a post -->
-            <a href="{% url 'post_detail' slug=form.instance.slug %}" class="btn btn-secondary">Cancel</a>
-        {% endif %}
-    </form>
+<div class="container d-flex justify-content-center">
+    <div class="w-50">
+        <h2 class="text-center">{{ form.instance.pk|yesno:"Edit Post,Add New Post" }}</h2>
+        <form method="post" enctype="multipart/form-data" class="d-flex flex-column align-items-center">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-primary my-2">{{ form.instance.pk|yesno:"Update,Submit" }}</button>
+            {% if form.instance.pk %}
+                <a href="{% url 'post_detail' slug=form.instance.slug %}" class="btn btn-secondary">Cancel</a>
+            {% endif %}
+        </form>
+    </div>
 </div>
 {% endblock %}

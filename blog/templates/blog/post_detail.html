@@ -5,6 +5,7 @@
 
 
 {% block content %}
+
 <div class="masthead">
     <div class="container">
         <div class="row g-0">
@@ -50,7 +51,7 @@
             {% endif %}
             <span class="like-count">{{ post.likes_count }}</span>
           </span>
-    
+          
           <span class="bookmark-icon {% if request.user in post.bookmarks.all %}bookmarked{% endif %}"
             data-post-id="{{ post.id }}" data-authenticated="{% if user.is_authenticated %}true{% else %}false{% endif %}">
             {% if request.user in post.bookmarks.all %}

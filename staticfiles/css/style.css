@@ -134,6 +134,7 @@ body {
 .post-title {
     margin-top: 10%;
     margin-left: 5%;
+    font-size: 2rem;
 }
 
 .post-subtitle {
@@ -230,4 +231,22 @@ body {
 .btn-custom:hover {
     background-color: #007EA7;
     color: white;
+}
+
+  .like-icon i, .bookmark-icon i {
+      transition: color 0.3s ease, transform 0.3s ease;
+      color: white;
+  }
+
+  .like-icon:hover i, .bookmark-icon:hover i {
+      color: #007EA7;
+      transform: scale(1.1);
+  }
+
+  .liked i, .bookmarked i {
+      color: #007EA7 !important; /* Specific styles for already liked/bookmarked state */
+  }
+
+  .liked:hover i, .bookmarked:hover i {
+    color: #007EA7 !important; /* Maintain specific color on hover */
 }

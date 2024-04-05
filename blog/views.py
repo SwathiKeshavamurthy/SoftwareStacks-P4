@@ -190,3 +190,38 @@ def add_post(request):
     else:
         form = PostForm()
     return render(request, 'blog/add_post.html', {'form': form})
+
+@login_required
+def edit_post(request, slug):
+    post = get_object_or_404(Post, slug=slug, author=request.user)
+    # Ensure only unapproved posts can be edited
+    if post.approved:
+        messages.error(request, "Approved posts cannot be edited.")
+        return redirect('post_detail', slug=slug)
+
+    if request.method == 'POST':
+        form = PostForm(request.POST, request.FILES, instance=post)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Post successfully updated.')
+            return redirect('post_detail', slug=slug)
+    else:
+        form = PostForm(instance=post)
+
+    context = {
+        'form': form,
+        'edit_mode': True,  # To indicate we are in edit mode
+        'post': post  # Pass the post being edited to customize the template for editing
+    }
+    return render(request, 'blog/add_post.html', context)
+
+@login_required
+def delete_post(request, slug):
+    post = get_object_or_404(Post, slug=slug, author=request.user)
+    # Optionally, check if the post is not approved before allowing deletion
+    if not post.approved:
+        post.delete()
+        messages.success(request, "Post successfully deleted.")
+    else:
+        messages.error(request, "Approved posts cannot be deleted.")
+    return redirect('user_posts')  # Redirect to the view showing the user's posts

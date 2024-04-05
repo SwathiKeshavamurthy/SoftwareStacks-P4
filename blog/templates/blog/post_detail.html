@@ -94,8 +94,8 @@
           </p>
           {% endif %}
           {% if user.is_authenticated and comment.author == user %}
-          <button class="btn btn-edit" comment_id="{{ comment.id }}">Edit</button>
-          <button class="btn btn-delete" comment_id="{{ comment.id }}">Delete</button>
+          <button class="btn btn-edit" comment_id="{{ comment.id }}">Edit Comment</button>
+          <button class="btn btn-delete" comment_id="{{ comment.id }}">Delete Comment</button>
           {% endif %}
         </div>
         <!-- Our for loop ends here -->
@@ -136,6 +136,15 @@
           <a id="deleteConfirm" href="#" class="btn btn-danger">Delete</a>
       </div>
   </div>
+</div>
+{% endif %}
+<!-- Edit and Delete Buttons for Unapproved Posts Visible to Post Owner -->
+{% if not post.approved and post.author == request.user %}
+<div class="row mb-5">
+    <div class="col-12 d-flex justify-content-center">
+        <a href="{% url 'edit_post' slug=post.slug %}" class="btn btn-primary me-2">Edit Post</a>
+        <a href="{% url 'delete_post' slug=post.slug %}" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this post? This action cannot be undone!');">Delete Post</a>
+    </div>
 </div>
 {% endif %}
 </div>

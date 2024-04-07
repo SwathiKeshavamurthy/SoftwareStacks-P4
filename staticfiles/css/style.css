@@ -235,3 +235,7 @@ body {
 .liked:hover i, .bookmarked:hover i {
     color: #007EA7 !important; /* Maintain specific color on hover */
 }
+
+.text-warning-orange {
+    color: orange;
+}

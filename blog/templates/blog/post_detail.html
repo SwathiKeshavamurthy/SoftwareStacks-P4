@@ -143,8 +143,24 @@
   </div>
 </div>
 {% endif %}
-<!-- Edit and Delete Buttons for Unapproved Posts Visible to Post Owner -->
+<!-- Displaying the post review status -->
 {% if not post.approved and post.author == request.user %}
+<div class="row mb-3">
+    <div class="col-12">
+        <p><strong>Post Review Status:</strong> 
+            {% if post.post_review_status == 'pending' %}
+                <span class="text-warning-orange">PENDING - The Post is awaiting for the Review.</span>
+            {% elif post.post_review_status == 'rejected' %}
+                <span class="text-danger">REJECTED - The Post has been Rejected. Make changes and Re-Submit to review again.</span>
+            {% elif post.post_review_status == 'accepted' %}
+                <span class="text-success">ACCEPTED - The Post has been Accepted. And will be published soon.</span>
+            {% endif %}
+        </p>
+    </div>
+</div>
+{% endif %}
+<!-- Edit and Delete Buttons for Unapproved Posts Visible to Post Owner -->
+{% if not post.approved and post.author == request.user and not post.post_review_status == 'accepted' %}
 <div class="row mb-5">
     <div class="col-12 d-flex justify-content-center">
         <a href="{% url 'edit_post' slug=post.slug %}" class="btn btn-primary me-2">Edit Post</a>

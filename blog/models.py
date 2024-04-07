@@ -36,7 +36,7 @@ class Post(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
     status = models.IntegerField(choices=STATUS, default=0)
-    excerpt = models.TextField(blank=True)
+    excerpt = models.TextField(blank=False)
     post_review_status = models.CharField(max_length=10, choices=REVIEW_STATUS, default='pending')
     approved = models.BooleanField(default=False)
     likes = models.ManyToManyField(User, related_name="liked_post", blank=True)

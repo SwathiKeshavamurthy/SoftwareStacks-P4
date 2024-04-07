@@ -91,35 +91,34 @@ body {
     margin-top: 10px;
     overflow: hidden;
     position: relative;
-    display: inline-block;
-    height: 33vh;
+    display: flex;
+    align-items: center;
     width: 100%;
 }
 
 .masthead-text {
     background-color: #00171F;
     color: white;
-    position: relative;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+    width: 40%; /* Set text width to 40% */
 }
 
 .masthead-image {
     position: relative;
     overflow: hidden;
+    flex-grow: 1; /* Take remaining space */
+    width: 60%; /* Set image width to 60% */
 }
 
-.masthead-image:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 90%;
-    height: 100%;
-    width: 150%;
-    background: #445261;
-    -webkit-transform: skew(15deg);
-    -moz-transform: skew(15deg);
-    transform: skew(15deg);
-    z-index: 100;
+.masthead-image img {
+    width: 100%; /* Ensure image fills its container */
+    height: auto;
+    display: block;
+    border-radius: 10px;
 }
+
 
 .post-link {
     text-decoration: none;
@@ -134,7 +133,7 @@ body {
 .post-title {
     margin-top: 10%;
     margin-left: 5%;
-    font-size: 2rem;
+    font-size: 3rem;
 }
 
 .post-subtitle {
@@ -165,22 +164,9 @@ body {
     text-decoration: underline;
 }
 
-.btn-like {
-    color: #E84610;
-    border: none;
-    background: transparent;
-}
-
 .btn-delete {
     color: #fff;
     background: #E84610;
-}
-
-.btn-like:hover,
-.btn-like:active {
-    color: #E84610;
-    background: transparent;
-    border: none;
 }
 
 .faded {
@@ -233,20 +219,19 @@ body {
     color: white;
 }
 
-  .like-icon i, .bookmark-icon i {
-      transition: color 0.3s ease, transform 0.3s ease;
-      color: white;
-  }
+.like-icon i, .bookmark-icon i {
+    transition: color 0.3s ease, transform 0.3s ease;
+}
 
-  .like-icon:hover i, .bookmark-icon:hover i {
-      color: #007EA7;
-      transform: scale(1.1);
-  }
+.like-icon:hover i, .bookmark-icon:hover i {
+    color: #007EA7;
+    transform: scale(1.1);
+}
 
-  .liked i, .bookmarked i {
-      color: #007EA7 !important; /* Specific styles for already liked/bookmarked state */
-  }
+.liked i, .bookmarked i {
+    color: #007EA7 !important; /* Specific styles for already liked/bookmarked state */
+}
 
-  .liked:hover i, .bookmarked:hover i {
+.liked:hover i, .bookmarked:hover i {
     color: #007EA7 !important; /* Maintain specific color on hover */
 }

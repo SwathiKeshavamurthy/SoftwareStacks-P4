@@ -181,10 +181,7 @@ def add_post(request):
         if form.is_valid():
             new_post = form.save(commit=False)
             new_post.author = request.user
-            # Assume all posts require approval, so we don't set it as approved yet
-            # new_post.approved = False (if you have such a field and want to explicitly set it)
             new_post.save()
-            # Add a success message
             messages.success(request, 'Post added successfully and is awaiting approval.')
             return redirect('home')  # Redirect to a relevant page
     else:
@@ -194,7 +191,6 @@ def add_post(request):
 @login_required
 def edit_post(request, slug):
     post = get_object_or_404(Post, slug=slug, author=request.user)
-    # Ensure only unapproved posts can be edited
     if post.approved:
         messages.error(request, "Approved posts cannot be edited.")
         return redirect('post_detail', slug=slug)
@@ -210,15 +206,14 @@ def edit_post(request, slug):
 
     context = {
         'form': form,
-        'edit_mode': True,  # To indicate we are in edit mode
-        'post': post  # Pass the post being edited to customize the template for editing
+        'edit_mode': True,
+        'post': post 
     }
     return render(request, 'blog/add_post.html', context)
 
 @login_required
 def delete_post(request, slug):
     post = get_object_or_404(Post, slug=slug, author=request.user)
-    # Optionally, check if the post is not approved before allowing deletion
     if not post.approved:
         post.delete()
         messages.success(request, "Post successfully deleted.")

@@ -4,13 +4,15 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
+<br>
 <div class="container d-flex justify-content-center">
     <div class="w-50">
         <h2 class="text-center">{{ form.instance.pk|yesno:"Edit Post,Add New Post" }}</h2>
         <form method="post" enctype="multipart/form-data" class="d-flex flex-column align-items-center">
             {% csrf_token %}
             {{ form.as_p }}
-            <button type="submit" class="btn btn-primary my-2">{{ form.instance.pk|yesno:"Update,Submit" }}</button>
+            <button type="submit" class=" btn btn-custom btn-signup btn-lg dark-bg">{{ form.instance.pk|yesno:"Update,Submit" }}</button>
+            <br>
             {% if form.instance.pk %}
                 <a href="{% url 'post_detail' slug=form.instance.slug %}" class="btn btn-secondary">Cancel</a>
             {% endif %}

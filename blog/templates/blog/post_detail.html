@@ -116,7 +116,7 @@
           <form id="commentForm" method="post" style="margin-top: 1.3em;">
               {{ comment_form | crispy }}
               {% csrf_token %}
-              <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Submit</button>
+              <button id="submitButton" type="submit" class="btn btn-custom btn-signup btn-lg dark-bg">Submit</button>
           </form>
           {% else %}
           <p>Log in to leave a comment</p>
@@ -125,7 +125,7 @@
   </div>
 </div>
 </div>
-<!-- Delete confirmation modal -->
+<!-- Delete comment confirmation modal -->
 <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
 <div class="modal-dialog">
   <div class="modal-content">

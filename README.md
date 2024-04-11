@@ -43,6 +43,24 @@ Join Software Stacks today and become part of a community that's shaping the fut
     - [Google Fonts](#google-fonts)
       - [Roboto](#roboto)
       - [Lato](#lato)
+- [User Stories, Milestones and Epics](#user-stories-milestones-and-epics)
+  - [Users Stories](#users-stories)
+  - [Epics](#epics)
+    - [Epic 1: User Engagement and Interaction](#epic-1-user-engagement-and-interaction)
+    - [Epic 2: User Account Management](#epic-2-user-account-management)
+    - [Epic 3: Core Platform Development](#epic-3-core-platform-development)
+    - [Epic 4: Content Management and Administration](#epic-4-content-management-and-administration)
+    - [Epic 5: Community Building and Feedback](#epic-5-community-building-and-feedback)
+    - [Epic 6: Documentation and Quality Assurance](#epic-6-documentation-and-quality-assurance)
+- [Scope Plane](#scope-plane)
+- [Structural Plane](#structural-plane)
+  - [Technology Used](#technology-used)
+    - [Frontend](#frontend)
+    - [Backend](#backend)
+    - [Deployment and Version Control](#deployment-and-version-control)
+    - [Others](#others)
+    - [Development Tools](#development-tools)
+    - [Validation Tools](#validation-tools)
 
 # Overview
 
@@ -112,4 +130,195 @@ For the **Software Stacks** project, the selection of fonts plays a crucial role
 - **Reason for Selection**: The semi-rounded details of the letters give Lato a feeling of warmth, while the strong structure provides stability and seriousness. This combination makes it perfect for drawing attention to section headings and important information.
 
 [Lato on Google Fonts](https://fonts.google.com/specimen/Lato)
+
+# User Stories, Milestones and Epics
+
+## Users Stories
+
+**User stories** are a brief statement of intent that captures what a user does or needs to do as part of their job function. They are written in non-technical language and focus on the value or outcome that the user
+
+| Title | User Story | MoSCoW Priority | Milestone |
+|-------|------------|----------|-----------|
+| Comment on a Post | As a **user**, I want to **comment on a post** so that I can **engage with the content**. | **MUST HAVE** | Core Functionality |
+| Bookmark Blog Posts | As a **user**, I want to **bookmark blog posts** so that I can **easily find them later**. | **SHOULD HAVE** | Core Functionality |
+| Like Blog Posts | As a **user**, I want to **like blog posts** so that I can **express my appreciation for the content**. | **MUST HAVE** | Core Functionality |
+| Account Registration | As a **user**, I want to **register an account** so that I can **interact with the site's features**. | **MUST HAVE** | Core Functionality |
+| Browse Without Logging In | As a **user**, I want to **browse without logging in** so that I can **view content without an account**. | **MUST HAVE** | Core Functionality |
+| 'Register' and 'Login' Buttons Disappear After 'Login' | As a **user**, I want **'Register' and 'Login' buttons to disappear after 'Login'** so that I can **know I'm logged in**. | **MUST HAVE** | Core Functionality |
+| Manage My Posts | As a **user**, I want to **manage my posts** so that I can **control the content I have created**. | **MUST HAVE** | Core Functionality |
+| Create Drafts | As a **user**, I want to **create drafts** so that I can **save my content before publishing**. | **MUST HAVE** | Core Functionality |
+| Search Blog Posts | As a **user**, I want to **search blog posts** so that I can **find content relevant to my interests**. | **SHOULD HAVE** | Enhanced User Experience |
+| View Paginated List of Posts | As a **user**, I want to **view a paginated list of posts** so that I can **easily navigate through content**. | **SHOULD HAVE** | Enhanced User Experience |
+| Browse Categories | As a **user**, I want to **browse categories** so that I can **filter the posts by topics of interest**. | **SHOULD HAVE** | Enhanced User Experience |
+| Enhance Data Validation | As a **user**, I want **to enhance data validation** so that I can **ensure the integrity of my inputs**. | **SHOULD HAVE** | Enhanced User Experience |
+| Edit Existing Blog Post | As a **user**, I want to **edit my existing blog post** so that I can **update or correct information**. | **MUST HAVE** | Content Management |
+| Implement Comprehensive Testing | As a **user**, I want to **implement comprehensive testing** so that I can **ensure the application functions correctly**. | **MUST HAVE** | Content Management |
+| Delete Existing Blog Posts | As a **user**, I want to **delete existing blog posts** so that I can **remove outdated or incorrect content**. | **SHOULD HAVE** | Content Management |
+| Submit Contact Form | As a **user**, I want to **submit a contact form and see it marked as 'read' by site owner** so that I can **know my inquiry has been acknowledged**. | **COULD HAVE** | Community Interaction |
+| Modify or Delete My Comment on a Post | As a **user**, I want to **modify or delete my comment on a post** so that I can **manage my interactions**. | **COULD HAVE** | Community Interaction |
+| Create Comprehensive Documentation | As a **developer**, I want to **create comprehensive documentation** so that **users and other developers can understand and use the site effectively**. | **MUST HAVE** | Future Considerations |
+
+**A milestone,** represents a significant checkpoint or goal in a project's timeline. Milestones are used to signify the completion of a key phase of work, the achievement of a major objective, or the meeting of a significant deadline. They are critical for tracking progress, setting deadlines, and aligning the team and stakeholders around key project events or achievements. Unlike tasks or user stories, milestones don't involve work themselves but are markers indicating that a specific set of work has been completed.
+
+## Epics
+
+**An epic** in software development and project management is a large body of work that can be broken down into smaller tasks or stories, often referred to as user stories. Epics are used to organize related tasks that contribute toward a significant, unified objective within a project. They help teams to focus on bigger-picture goals and ensure that all the smaller tasks (user stories) are aligned towards achieving that overarching aim. Epics typically span across multiple sprints or iterations and can take several weeks or months to complete.
+
+### Epic 1: User Engagement and Interaction
+- **Goal:** Enhance user engagement and community interaction through posts, comments, and social features.
+- **Associated User Stories:**
+  - Comment on a post
+  - Bookmark Blog Posts
+  - Like Blog Posts
+  - View paginated list of posts
+  - Search Blog Posts
+  - View comments
+  - Navigate easily
+  - Modify or delete comment on a post
+  - Inquiry via Contact Section
+
+### Epic 2: User Account Management
+- **Goal:** Provide a seamless and secure user experience from account registration through to content management.
+- **Associated User Stories:**
+  - Account Registration
+  - 'Register' and 'Login' buttons disappear after 'Login'.
+  - Manage posts
+  - Create drafts
+  - Edit Existing Blog Post
+  - Approve comments
+  - Delete Existing Blog Post
+  - Add Post USER STORY: Allow Registered user to Create New Posts
+
+### Epic 3: Core Platform Development
+- **Goal:** Establish the foundational elements of the Software Stacks platform, including database creation, deployment, and basic functionalities.
+- **Associated User Stories:**
+  - Creating the Database in ElephantSQL
+  - Deploying the Django Project on Heroku
+  - Software Stacks Blog
+  - Create Project App
+  - Open a Post
+  - Browse without Logging in
+
+### Epic 4: Content Management and Administration
+- **Goal:** Empower authors with comprehensive tools for content creation, modification, and management.
+- **Associated User Stories:**
+  - EDIT POST USER STORY: Enable Post Modifications by Author/Post Owner.
+  - DELETE POST USER STORY: Facilitate Removal of Outdated or Incorrect Posts
+  - ADD POST USER STORY: Allow Registered user to Create New Posts
+  - TESTING: Implement Comprehensive Testing
+  - VALIDATION: Enhance Data Validation
+
+### Epic 5: Community Building and Feedback
+- **Goal:** Foster community interaction and feedback through enhanced contact form functionalities and about page updates.
+- **Associated User Stories:**
+  - CONTACT FORM USER STORY: Marking Contact Requests as "Read"
+  - CONTACT FORM USER STORY: Contact Form Submission Feature(Site Owner)
+  - CONTACT FORM USER STORY: Contact Form Submission Feature (Registered User)
+  - ABOUT APP USER STORY: Add and update the about text
+  - ABOUT APP USER STORY: Read about the site
+
+### Epic 6: Documentation and Quality Assurance
+- **Goal:** Ensure the platform's reliability and ease of use through comprehensive documentation, testing, and data validation.
+- **Associated User Stories:**
+  - DOCUMENTATION: Create Comprehensive Documentation
+  - VALIDATION: Enhance Data Validation
+  - TESTING: Implement Comprehensive Testing
+
+Each epic captures a significant area of functionality or development goal, providing a roadmap for progressing from initial platform setup to a fully-featured, user-engaged community platform.
+
+# Scope Plane
+
+**Purpose:**
+Software Stacks aims to educate and engage users interested in various software technologies, focusing on Front-End Development, E-Commerce, and Predictive Analysis. It serves as a platform for both novice and experienced developers to explore articles, tutorials, and community insights.
+
+**Goals:**
+- Provide comprehensive guides and articles on key software development topics.
+- Offer a community-driven platform where users can interact, and learn from each other.
+- Enable users to stay updated with the latest trends and best practices in software technology.
+
+**Target Audience:**
+- Novice to experienced software developers.
+- Individuals interested in the practical applications of software technology in business.
+- Educators and students looking for resources on software development and technology trends.
+
+**User Needs:**
+- Access to reliable and up-to-date information.
+- Ability to interact with other community members.
+- Tools to navigate content based on specific interests or needs.
+
+**Features:**
+- Detailed articles and blog posts categorized by technology themes.
+- Community forums for discussion and questions.
+- Regular updates and new content notifications.
+- User profiles for personalized experiences and content tracking.
+
+# Structural Plane
+
+**Information Architecture:**
+- **Home Page:** Overview of the site, featured articles, and direct access to major categories.
+- **Category Pages:** Dedicated pages for each major topic (Front-End Development, E-Commerce, Predictive Analysis) featuring articles.
+- **Article Detail Pages:** Comprehensive content on chosen topics, including images, and more information.
+- **About & Contact Pages:** Organized by category to facilitate discussions and interactions among users.
+- **Registration and SignIn Page:** Users can signup and signin to more interactions.
+- **User Profile:** Personalized area where users can manage their preferences, saved articles, and contributions to discussions.
+
+**Navigation:**
+- **Primary Navigation:** Direct links to each major category from every page.
+- **Secondary Navigation:** Links to user profiles, contact information, and about page.
+- **Footer Navigation:** Links to privacy policy, terms of use,  and social media.
+
+**Interaction Design:**
+- Responsive design to ensure usability across devices.
+- Interactive elements such as buttons, links, and forms are designed for ease of use.
+- Visual cues (icons, color changes) for interactive elements to enhance user experience.
+
+**Wireframes:**
+- Home Page: Features a carousel of featured articles, a quick summary of categories, and a latest articles section.
+- Category Pages: List articles with brief summaries, sortable by popularity or date.
+- Article Detail Page: Rich content layout with sidebars for related articles and author info.
+
+**Accessibility:**
+- Ensure all content and navigation is accessible with keyboard and screen readers.
+- Use appropriate ARIA labels and roles for dynamic content.
+
+These sections of the README provide a clear overview of what the project aims to achieve and how it's structured to meet the needs of its users. This structure not only helps developers and contributors understand the project's scope but also guides the end-users in navigating and making the most out of the platform.
+
+**Wireframes**
+
+I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wireframes.
+
+## Technology Used
+
+### Frontend
+- [**HTML5**](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5): Structure of the web pages.
+- [**CSS3**](https://developer.mozilla.org/en-US/docs/Web/CSS): Styling of the web content.
+- [**JavaScript**](https://developer.mozilla.org/en-US/docs/Web/JavaScript): Enhancements of interactivity and web behaviors.
+- [**Bootstrap**](https://getbootstrap.com/): Responsive design and layout framework.
+
+### Backend
+- [**Django**](https://www.djangoproject.com/): A high-level Python web framework.
+- [**Python**](https://www.python.org/): Backend programming language.
+- [**SQLite**](https://www.sqlite.org/index.html) (Development) / [**PostgreSQL**](https://www.postgresql.org/) (Production): Database systems.
+
+### Deployment and Version Control
+- [**Git**](https://git-scm.com/): Used for version control.
+- [**GitHub**](https://github.com/): Hosts the repository and facilitates version control and collaboration.
+- [**Heroku**](https://www.heroku.com/): Platform as a service (PaaS) for deploying applications.
+
+### Others
+- [**Cloudinary**](https://cloudinary.com/): An end-to-end image and video management solution.
+- [**Favicon.io**](https://favicon.io/): To generate favicon icons for the website.
+- [**Font Awesome**](https://fontawesome.com/): Provides icons for enhancing UI/UX.
+
+### Development Tools
+- [**GitPod**](https://www.gitpod.io/): Preferred IDE for writing and editing code.
+- [**Django Extensions**](https://github.com/django-extensions/django-extensions): Provides custom management extensions for Django.
+
+### Validation Tools
+- [**W3C Markup Validation Service**](https://validator.w3.org/): For validating HTML5 code.
+- [**W3C CSS Validation Service**](https://jigsaw.w3.org/css-validator/): For validating CSS3 code.
+- [**JSHint**](https://jshint.com/): A tool that helps to detect errors and potential problems in JavaScript code.
+- [**CI Python Linter**](https://pep8ci.herokuapp.com/): Analyzes Python code to look for bugs and signs of poor quality.
+- [**Google Lighthouse**](https://developers.google.com/web/tools/lighthouse): For auditing performance, accessibility, and search engine optimization of web pages.
+
 

@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col text-center">
+            <h1 class="display-1">Oops!</h1>
+            <p class="lead">Something went wrong on our end.</p>
+            <p>We're experiencing some technical issues. Our team is working to resolve the issue as quickly as possible.</p>
+            <a href="{% url 'home' %}" class="btn btn-primary">Return Home</a>
+        </div>
+    </div>
+</div>
+{% endblock content %}

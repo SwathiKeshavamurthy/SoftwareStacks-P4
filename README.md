@@ -54,6 +54,25 @@ Join Software Stacks today and become part of a community that's shaping the fut
     - [Epic 6: Documentation and Quality Assurance](#epic-6-documentation-and-quality-assurance)
 - [Scope Plane](#scope-plane)
 - [Structural Plane](#structural-plane)
+- [Wireframes](#wireframes)
+    - [Home Page Wireframes](#home-page-wireframes)
+    - [Categories Page Wireframes](#categories-page-wireframes)
+    - [Post Detail Page Wireframes](#post-detail-page-wireframes)
+    - [About \& Contact Page Wireframes](#about--contact-page-wireframes)
+    - [Add Stack Page Wireframes](#add-stack-page-wireframes)
+    - [Register Page Wireframes](#register-page-wireframes)
+    - [Login Page Wireframes](#login-page-wireframes)
+    - [Logout Page Wireframes](#logout-page-wireframes)
+    - [My Bookmarks Page Wireframes](#my-bookmarks-page-wireframes)
+    - [My Likes Page Wireframes](#my-likes-page-wireframes)
+    - [My Comments Page Wireframes](#my-comments-page-wireframes)
+    - [My Posts Page Wireframes](#my-posts-page-wireframes)
+- [Database Schema - Entity Relationship Diagram](#database-schema---entity-relationship-diagram)
+    - [Database Schema](#database-schema)
+      - [Entity Relationship Diagram (ERD)](#entity-relationship-diagram-erd)
+      - [Tables Overview](#tables-overview)
+      - [Relationships](#relationships)
+      - [Design Considerations](#design-considerations)
   - [Technology Used](#technology-used)
     - [Frontend](#frontend)
     - [Backend](#backend)
@@ -283,9 +302,183 @@ Software Stacks aims to educate and engage users interested in various software 
 
 These sections of the README provide a clear overview of what the project aims to achieve and how it's structured to meet the needs of its users. This structure not only helps developers and contributors understand the project's scope but also guides the end-users in navigating and making the most out of the platform.
 
-**Wireframes**
+# Wireframes
 
 I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wireframes.
+
+### Home Page Wireframes
+<details>
+<summary>Click to View Home Page wireframes</summary>
+
+**Mobile**
+![wireframes](documentation/wireframes/home.JPG)
+
+**Tablet**
+![wireframes](documentation/wireframes/tab.JPG)
+
+**Desktop**
+![wireframes](documentation/wireframes/phone.JPG)
+
+</details>
+
+### Categories Page Wireframes
+<details>
+
+<summary>Click to View Categories Page wireframes</summary>
+
+**Desktop**
+![wireframes](documentation/wireframes/categories.JPG)
+
+</details>
+
+### Post Detail Page Wireframes
+<details>
+
+<summary>Click to View Post Detail Page wireframes</summary>
+
+**Desktop**
+![wireframes](documentation/wireframes/post_detail.JPG)
+
+</details>
+
+### About & Contact Page Wireframes
+<details>
+
+<summary>Click to View About & Contact Page wireframes</summary>
+
+**Desktop**
+![wireframes](documentation/wireframes/about.JPG)
+
+</details>
+
+### Add Stack Page Wireframes
+<details>
+
+<summary>Click to View Add Stack Page wireframes</summary>
+
+**Desktop**
+![wireframes](documentation/wireframes/add_stack.JPG)
+
+</details>
+
+### Register Page Wireframes
+<details>
+
+<summary>Click to View Register Page wireframes</summary>
+
+**Desktop**
+![wireframes](documentation/wireframes/register.JPG)
+
+</details>
+
+### Login Page Wireframes
+<details>
+
+<summary>Click to View Login Page wireframes</summary>
+
+**Desktop**
+![wireframes](documentation/wireframes/login.JPG)
+
+</details>
+
+### Logout Page Wireframes
+<details>
+
+<summary>Click to View Logout Page wireframes</summary>
+
+**Desktop**
+![wireframes](documentation/wireframes/logout.JPG)
+
+</details>
+
+### My Bookmarks Page Wireframes
+<details>
+
+<summary>Click to View My Bookmarks Page wireframes</summary>
+
+**Desktop**
+![wireframes](documentation/wireframes/bookmarked.JPG)
+
+</details>
+
+### My Likes Page Wireframes
+<details>
+
+<summary>Click to View My Likes Page wireframes</summary>
+
+**Desktop**
+![wireframes](documentation/wireframes/liked.JPG)
+
+</details>
+
+### My Comments Page Wireframes
+<details>
+
+<summary>Click to View My Comments Page wireframes</summary>
+
+**Desktop**
+![wireframes](documentation/wireframes/comments.JPG)
+
+</details>
+
+### My Posts Page Wireframes
+<details>
+
+<summary>Click to View My Posts Page wireframes</summary>
+
+**Desktop**
+![wireframes](documentation/wireframes/posts.JPG)
+
+</details>
+
+# Database Schema - Entity Relationship Diagram
+
+I've used [dbdiagram](https://dbdiagram.io/home) to design my site's ERD.
+
+### Database Schema
+
+The Software Stacks application is structured on a robust database schema designed to facilitate the efficient organization and retrieval of data. Below is an overview of the database schema and the relationships between the different entities.
+
+#### Entity Relationship Diagram (ERD)
+
+The Entity Relationship Diagram (ERD) represents the database schema of Software Stacks, detailing the system's tables, the data fields within them, and the relationships between the tables.
+
+![ERD of Software Stacks](documentation/screenshots/erd.JPG)
+
+#### Tables Overview
+
+- **User**: Stores information about the users of the platform, including username, email, and password. The `is_staff` field indicates whether a user has administrative privileges.
+
+- **Profile**: Contains extended user information such as name, join date, and bookmarks. This table extends the `User` table by associating profiles with user accounts.
+
+- **Blog**: Central to the application, the `Blog` table holds data about blog posts including title, content, and metadata like creation date and whether the post is approved for public viewing.
+
+- **Comment**: Enables the community aspect of the blog by storing user comments on blog posts. Each comment is linked to a specific post and user.
+
+- **Category**: Categories allow for the organization of blog posts into topics, making it easier for users to find content related to specific subjects.
+
+- **About**: This table likely contains static information about the application, such as the company's background, mission statement, and contact details.
+
+- **Contact**: Presumably used for storing user inquiries submitted through the platform's contact form.
+
+#### Relationships
+
+- A **one-to-many** relationship exists between `User` and `Blog`, where one user can author many blog posts.
+- A similar **one-to-many** relationship is set between `Blog` and `Comment`, allowing multiple comments to be associated with a single blog post.
+- The `Profile` table has a **one-to-one** relationship with the `User` table, extending it with additional personal information.
+- The `Category` table is linked to the `Blog` table in a **many-to-one** relationship, categorizing each blog post.
+  
+#### Design Considerations
+
+The schema was designed with scalability in mind, ensuring that as the platform grows, new features and data types can be easily incorporated. For example, the separation of the `User` and `Profile` tables allows for flexible user management and the possibility to include additional user attributes in the future without altering the core user authentication system.
+
+**CSRF Tokens** 
+
+CSRF (Cross-Site Request Forgery) tokens are included in every form to help authenticate the request with the server when the form is submitted. Absence of these tokens can leave a site vulnerable to attackers who may steal a users data.
+
+**AllAuth**  
+
+Django AllAuth is an installable framework that takes care of the user registration and authentication process. Authentication was needed to determine when a user was registered or unregistered and it controlled what content was accessible on **SoftwareStacks**
 
 ## Technology Used
 

@@ -73,7 +73,10 @@ Join Software Stacks today and become part of a community that's shaping the fut
       - [Tables Overview](#tables-overview)
       - [Relationships](#relationships)
       - [Design Considerations](#design-considerations)
-  - [Technology Used](#technology-used)
+- [Features](#features-1)
+  - [User View - Registered/Unregistered](#user-view---registeredunregistered)
+  - [CRUD Functionality](#crud-functionality)
+- [Technology Used](#technology-used)
     - [Frontend](#frontend)
     - [Backend](#backend)
     - [Deployment and Version Control](#deployment-and-version-control)
@@ -276,7 +279,7 @@ Software Stacks aims to educate and engage users interested in various software 
 **Information Architecture:**
 - **Home Page:** Overview of the site, featured articles, and direct access to major categories.
 - **Category Pages:** Dedicated pages for each major topic (Front-End Development, E-Commerce, Predictive Analysis) featuring articles.
-- **Article Detail Pages:** Comprehensive content on chosen topics, including images, and more information.
+- **Post Detail Pages:** Comprehensive content on chosen topics, including images, and more information.
 - **About & Contact Pages:** Organized by category to facilitate discussions and interactions among users.
 - **Registration and SignIn Page:** Users can signup and signin to more interactions.
 - **User Profile:** Personalized area where users can manage their preferences, saved articles, and contributions to discussions.
@@ -294,7 +297,7 @@ Software Stacks aims to educate and engage users interested in various software 
 **Wireframes:**
 - Home Page: Features a carousel of featured articles, a quick summary of categories, and a latest articles section.
 - Category Pages: List articles with brief summaries, sortable by popularity or date.
-- Article Detail Page: Rich content layout with sidebars for related articles and author info.
+- Post Detail Page: Rich content layout with sidebars for related articles and author info.
 
 **Accessibility:**
 - Ensure all content and navigation is accessible with keyboard and screen readers.
@@ -480,7 +483,38 @@ CSRF (Cross-Site Request Forgery) tokens are included in every form to help auth
 
 Django AllAuth is an installable framework that takes care of the user registration and authentication process. Authentication was needed to determine when a user was registered or unregistered and it controlled what content was accessible on **SoftwareStacks**
 
-## Technology Used
+# Features
+
+Software Stacks is designed with accessibility and user engagement in mind. The platform caters to both unregistered and registered users, offering a variety of features tailored to each user's experience.
+
+## User View - Registered/Unregistered
+
+Software Stacks ensures that essential information is accessible to all users while encouraging registration for a more interactive experience. Here's how features are distributed:
+
+| Feature           | Unregistered User              | Registered, Logged-In User          |
+|-------------------|--------------------------------|-------------------------------------|
+| Home Page         | Visible                        | Visible                             |
+| Profile           | Not visible - requires sign-up | Visible with full feature access    |
+| Blog Posts        | Visible - read-only access     | Visible with interactive capabilities (likes, comments, etc.) |
+| Categories        | Visible                        | Visible                             |
+| About & Contact   | Visible                        | Visible                             |
+| Authentication    | Only Sign Up/Login visible     | Sign Up/Login not visible; Logout available |
+| User Posts        | Not Visible                    | Visible - users can manage their own posts |
+
+## CRUD Functionality
+
+Software Stacks provides comprehensive CRUD (Create, Read, Update, Delete) functionalities, allowing users to fully interact with the platform's content and their own data.
+
+| Feature      | Create           | Read             | Update           | Delete           |
+|--------------|------------------|------------------|------------------|------------------|
+| Blog Posts   | Registered users can add new posts | All users can view published posts | Authors can edit their unpublished or pending review posts | Authors can delete their own posts |
+| Comments     | Registered users can comment on posts | All users can read approved comments | Users can edit their own comments within a certain timeframe | Users can delete their own comments |
+| User Profile | Automatically created upon user registration | Users can view their profile | - | -  |
+| Categories   | Admin-created    | Visible to all users for post categorization | Admins can update category information | Admins can remove categories |
+| Likes          | Like posts        | View liked posts  | -                | Unlike posts     |
+| Bookmarks      | Bookmark posts    | View bookmarked posts | -            | Remove bookmarks |
+
+# Technology Used
 
 ### Frontend
 - [**HTML5**](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5): Structure of the web pages.
@@ -513,5 +547,4 @@ Django AllAuth is an installable framework that takes care of the user registrat
 - [**JSHint**](https://jshint.com/): A tool that helps to detect errors and potential problems in JavaScript code.
 - [**CI Python Linter**](https://pep8ci.herokuapp.com/): Analyzes Python code to look for bugs and signs of poor quality.
 - [**Google Lighthouse**](https://developers.google.com/web/tools/lighthouse): For auditing performance, accessibility, and search engine optimization of web pages.
-
 

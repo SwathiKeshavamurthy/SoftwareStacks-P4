@@ -15,8 +15,11 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
+from django.conf.urls import handler403
 from django.urls import path, include
+from softwarestacks import views
 
+handler403 = views.custom_403_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),

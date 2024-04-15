@@ -17,7 +17,7 @@ Welcome to [**Software Stacks**](https://software-stacks-442e4344b2ad.herokuapp.
 
 **Software Stacks** focusing on Django and Bootstrap frameworks, Database manipulation and CRUD functionality. It is for educational purposes only.
 
-### Features
+### Our Website Features
 
 Software Stacks offers a range of features to engage our community, including:
 
@@ -33,56 +33,87 @@ Join Software Stacks today and become part of a community that's shaping the fut
 # Table of Contents
 - [Introduction](#introduction)
   - [Software Stacks](#software-stacks)
-    - [Features](#features)
+    - [Our Website Features](#our-website-features)
     - [Get Involved](#get-involved)
 - [Table of Contents](#table-of-contents)
 - [Overview](#overview)
 - [UX - User Experience](#ux---user-experience)
-- [Colour Scheme](#colour-scheme)
-- [Fonts](#fonts)
+- [Design](#design)
+  - [Colour Scheme](#colour-scheme)
+  - [Fonts](#fonts)
     - [Google Fonts](#google-fonts)
       - [Roboto](#roboto)
       - [Lato](#lato)
-- [User Stories, Milestones and Epics](#user-stories-milestones-and-epics)
-  - [Users Stories](#users-stories)
-  - [Epics](#epics)
-    - [Epic 1: User Engagement and Interaction](#epic-1-user-engagement-and-interaction)
-    - [Epic 2: User Account Management](#epic-2-user-account-management)
-    - [Epic 3: Core Platform Development](#epic-3-core-platform-development)
-    - [Epic 4: Content Management and Administration](#epic-4-content-management-and-administration)
-    - [Epic 5: Community Building and Feedback](#epic-5-community-building-and-feedback)
-    - [Epic 6: Documentation and Quality Assurance](#epic-6-documentation-and-quality-assurance)
-- [Scope Plane](#scope-plane)
-- [Structural Plane](#structural-plane)
-- [Wireframes](#wireframes)
-    - [Home Page Wireframes](#home-page-wireframes)
-    - [Categories Page Wireframes](#categories-page-wireframes)
-    - [Post Detail Page Wireframes](#post-detail-page-wireframes)
-    - [About \& Contact Page Wireframes](#about--contact-page-wireframes)
-    - [Add Stack Page Wireframes](#add-stack-page-wireframes)
-    - [Register Page Wireframes](#register-page-wireframes)
-    - [Login Page Wireframes](#login-page-wireframes)
-    - [Logout Page Wireframes](#logout-page-wireframes)
-    - [My Bookmarks Page Wireframes](#my-bookmarks-page-wireframes)
-    - [My Likes Page Wireframes](#my-likes-page-wireframes)
-    - [My Comments Page Wireframes](#my-comments-page-wireframes)
-    - [My Posts Page Wireframes](#my-posts-page-wireframes)
-- [Database Schema - Entity Relationship Diagram](#database-schema---entity-relationship-diagram)
+- [Project Planning](#project-planning)
+  - [Strategy Plane](#strategy-plane)
+  - [Agile Methodologies - Project Management:](#agile-methodologies---project-management)
+  - [MoSCoW Prioritization:](#moscow-prioritization)
+  - [User Stories, Milestones and Epics](#user-stories-milestones-and-epics)
+    - [Users Stories](#users-stories)
+    - [Milestones](#milestones)
+    - [Epics](#epics)
+      - [Epic 1: User Engagement and Interaction](#epic-1-user-engagement-and-interaction)
+      - [Epic 2: User Account Management](#epic-2-user-account-management)
+      - [Epic 3: Core Platform Development](#epic-3-core-platform-development)
+      - [Epic 4: Content Management and Administration](#epic-4-content-management-and-administration)
+      - [Epic 5: Community Building and Feedback](#epic-5-community-building-and-feedback)
+      - [Epic 6: Documentation and Quality Assurance](#epic-6-documentation-and-quality-assurance)
+  - [Scope Plane](#scope-plane)
+  - [Structural Plane](#structural-plane)
+  - [Skeleton \& Surface Planes](#skeleton--surface-planes)
+    - [Wireframes](#wireframes)
+      - [Home Page Wireframes](#home-page-wireframes)
+      - [Categories Page Wireframes](#categories-page-wireframes)
+      - [Post Detail Page Wireframes](#post-detail-page-wireframes)
+      - [About \& Contact Page Wireframes](#about--contact-page-wireframes)
+      - [Add Stack Page Wireframes](#add-stack-page-wireframes)
+      - [Register Page Wireframes](#register-page-wireframes)
+      - [Login Page Wireframes](#login-page-wireframes)
+      - [Logout Page Wireframes](#logout-page-wireframes)
+      - [My Bookmarks Page Wireframes](#my-bookmarks-page-wireframes)
+      - [My Likes Page Wireframes](#my-likes-page-wireframes)
+      - [My Comments Page Wireframes](#my-comments-page-wireframes)
+      - [My Posts Page Wireframes](#my-posts-page-wireframes)
+  - [Database Schema - Entity Relationship Diagram](#database-schema---entity-relationship-diagram)
     - [Database Schema](#database-schema)
       - [Entity Relationship Diagram (ERD)](#entity-relationship-diagram-erd)
       - [Tables Overview](#tables-overview)
       - [Relationships](#relationships)
       - [Design Considerations](#design-considerations)
-- [Features](#features-1)
-  - [User View - Registered/Unregistered](#user-view---registeredunregistered)
-  - [CRUD Functionality](#crud-functionality)
+    - [Security](#security)
+      - [Data Encryption](#data-encryption)
+      - [CSRF Tokens](#csrf-tokens)
+      - [AllAuth](#allauth)
+- [Features](#features)
+  - [Existing Features](#existing-features)
+    - [Features Functionality](#features-functionality)
+    - [CRUD Functionality](#crud-functionality)
+    - [All Existing Features with Screenshots](#all-existing-features-with-screenshots)
+      - [Home Page](#home-page)
+      - [User Registration, Login, and Logout](#user-registration-login-and-logout)
+      - [User Profile](#user-profile)
+      - [Add Stack](#add-stack)
+      - [Search Functionality](#search-functionality)
+      - [Stack Details](#stack-details)
+      - [Comments and Interactions](#comments-and-interactions)
+      - [Responsive Navigation Bar](#responsive-navigation-bar)
+      - [Categories](#categories)
+      - [My Bookmarks](#my-bookmarks)
+      - [My Likes](#my-likes)
+      - [My Comments](#my-comments)
+      - [My Posts](#my-posts)
+      - [Footer](#footer)
+      - [Admin Panel](#admin-panel)
+      - [Error Handling](#error-handling)
+  - [Future Features](#future-features)
 - [Technology Used](#technology-used)
     - [Frontend](#frontend)
     - [Backend](#backend)
     - [Deployment and Version Control](#deployment-and-version-control)
-    - [Others](#others)
     - [Development Tools](#development-tools)
+    - [Libraries and Frameworks](#libraries-and-frameworks)
     - [Validation Tools](#validation-tools)
+    - [Others](#others)
 
 # Overview
 
@@ -110,7 +141,9 @@ The UX design of Software Stacks focuses on simplicity, accessibility, and commu
 
 Overall, the UX design aims to make Software Stacks a welcoming, easy-to-use platform that meets the needs of its diverse user base.
 
-# Colour Scheme
+# Design
+
+## Colour Scheme
 
 The color scheme for Software Stacks is designed to create a visually appealing and user-friendly interface. Here's a detailed breakdown:
 
@@ -131,7 +164,7 @@ The color scheme for Software Stacks is designed to create a visually appealing 
 
 This carefully chosen palette not only enhances the aesthetic appeal of Software Stacks but also supports usability and accessibility, making the platform welcoming and easy to navigate for all users.
 
-# Fonts
+## Fonts
 
 For the **Software Stacks** project, the selection of fonts plays a crucial role in enhancing readability, ensuring accessibility, and contributing to the overall aesthetic of the application. Below is a detailed explanation of the fonts used in the project, along with their characteristics and reasons for selection.
 
@@ -153,9 +186,32 @@ For the **Software Stacks** project, the selection of fonts plays a crucial role
 
 [Lato on Google Fonts](https://fonts.google.com/specimen/Lato)
 
-# User Stories, Milestones and Epics
+# Project Planning
 
-## Users Stories
+## Strategy Plane
+
+**Project Overview:**  
+Software Stacks aims to create a centralized platform where users can explore, learn, and interact with content related to various software development technologies. This includes front-end development, e-commerce solutions, and predictive analytics. The platform will serve as an educational hub, community forum, and resource center for both novice and experienced developers.
+
+**Site Goals:**
+- Provide a robust resource for learning and discussion around key software development topics.
+- Foster a community of developers who can share insights, code snippets, and best practices.
+- Maintain a user-friendly interface that caters to both desktop and mobile users, ensuring accessibility and ease of navigation.
+- Enable scalable features that can evolve with technological advancements and user feedback.
+
+## Agile Methodologies - Project Management:  
+Software Stacks adopts Agile project management to ensure iterative development and continuous improvement. The use of GitHub Projects or similar tools will facilitate task management, tracking progress through a Kanban-style board.
+
+## MoSCoW Prioritization: 
+To effectively manage project scope, Software Stacks will implement the MoSCoW prioritization method:
+- **Must Haves**: Core functionalities that include article browsing, user registration/login, and interactive forums.
+- **Should Haves**: Enhanced features like user profiles, article bookmarking, and advanced search capabilities.
+- **Could Haves**: Additional functionalities such as personalized learning paths, user badges for engagement, and API integrations for pulling in external content.
+- **Won't Haves**: Features that are not essential for the initial launch phase, such as a full-fledged online course module or third-party advertising.
+
+## User Stories, Milestones and Epics
+
+### Users Stories
 
 **User stories** are a brief statement of intent that captures what a user does or needs to do as part of their job function. They are written in non-technical language and focus on the value or outcome that the user
 
@@ -180,13 +236,15 @@ For the **Software Stacks** project, the selection of fonts plays a crucial role
 | Modify or Delete My Comment on a Post | As a **user**, I want to **modify or delete my comment on a post** so that I can **manage my interactions**. | **COULD HAVE** | Community Interaction |
 | Create Comprehensive Documentation | As a **developer**, I want to **create comprehensive documentation** so that **users and other developers can understand and use the site effectively**. | **MUST HAVE** | Future Considerations |
 
-**A milestone,** represents a significant checkpoint or goal in a project's timeline. Milestones are used to signify the completion of a key phase of work, the achievement of a major objective, or the meeting of a significant deadline. They are critical for tracking progress, setting deadlines, and aligning the team and stakeholders around key project events or achievements. Unlike tasks or user stories, milestones don't involve work themselves but are markers indicating that a specific set of work has been completed.
+### Milestones
 
-## Epics
+**A milestone**, here from above table represents a significant checkpoint or goal in a project's timeline. Milestones are used to signify the completion of a key phase of work, the achievement of a major objective, or the meeting of a significant deadline. They are critical for tracking progress, setting deadlines, and aligning the team and stakeholders around key project events or achievements. Unlike tasks or user stories, milestones don't involve work themselves but are markers indicating that a specific set of work has been completed.
+
+### Epics
 
 **An epic** in software development and project management is a large body of work that can be broken down into smaller tasks or stories, often referred to as user stories. Epics are used to organize related tasks that contribute toward a significant, unified objective within a project. They help teams to focus on bigger-picture goals and ensure that all the smaller tasks (user stories) are aligned towards achieving that overarching aim. Epics typically span across multiple sprints or iterations and can take several weeks or months to complete.
 
-### Epic 1: User Engagement and Interaction
+#### Epic 1: User Engagement and Interaction
 - **Goal:** Enhance user engagement and community interaction through posts, comments, and social features.
 - **Associated User Stories:**
   - Comment on a post
@@ -199,7 +257,7 @@ For the **Software Stacks** project, the selection of fonts plays a crucial role
   - Modify or delete comment on a post
   - Inquiry via Contact Section
 
-### Epic 2: User Account Management
+#### Epic 2: User Account Management
 - **Goal:** Provide a seamless and secure user experience from account registration through to content management.
 - **Associated User Stories:**
   - Account Registration
@@ -211,7 +269,7 @@ For the **Software Stacks** project, the selection of fonts plays a crucial role
   - Delete Existing Blog Post
   - Add Post USER STORY: Allow Registered user to Create New Posts
 
-### Epic 3: Core Platform Development
+#### Epic 3: Core Platform Development
 - **Goal:** Establish the foundational elements of the Software Stacks platform, including database creation, deployment, and basic functionalities.
 - **Associated User Stories:**
   - Creating the Database in ElephantSQL
@@ -221,7 +279,7 @@ For the **Software Stacks** project, the selection of fonts plays a crucial role
   - Open a Post
   - Browse without Logging in
 
-### Epic 4: Content Management and Administration
+#### Epic 4: Content Management and Administration
 - **Goal:** Empower authors with comprehensive tools for content creation, modification, and management.
 - **Associated User Stories:**
   - EDIT POST USER STORY: Enable Post Modifications by Author/Post Owner.
@@ -230,7 +288,7 @@ For the **Software Stacks** project, the selection of fonts plays a crucial role
   - TESTING: Implement Comprehensive Testing
   - VALIDATION: Enhance Data Validation
 
-### Epic 5: Community Building and Feedback
+#### Epic 5: Community Building and Feedback
 - **Goal:** Foster community interaction and feedback through enhanced contact form functionalities and about page updates.
 - **Associated User Stories:**
   - CONTACT FORM USER STORY: Marking Contact Requests as "Read"
@@ -239,7 +297,7 @@ For the **Software Stacks** project, the selection of fonts plays a crucial role
   - ABOUT APP USER STORY: Add and update the about text
   - ABOUT APP USER STORY: Read about the site
 
-### Epic 6: Documentation and Quality Assurance
+#### Epic 6: Documentation and Quality Assurance
 - **Goal:** Ensure the platform's reliability and ease of use through comprehensive documentation, testing, and data validation.
 - **Associated User Stories:**
   - DOCUMENTATION: Create Comprehensive Documentation
@@ -248,7 +306,7 @@ For the **Software Stacks** project, the selection of fonts plays a crucial role
 
 Each epic captures a significant area of functionality or development goal, providing a roadmap for progressing from initial platform setup to a fully-featured, user-engaged community platform.
 
-# Scope Plane
+## Scope Plane
 
 **Purpose:**
 Software Stacks aims to educate and engage users interested in various software technologies, focusing on Front-End Development, E-Commerce, and Predictive Analysis. It serves as a platform for both novice and experienced developers to explore articles, tutorials, and community insights.
@@ -270,11 +328,10 @@ Software Stacks aims to educate and engage users interested in various software 
 
 **Features:**
 - Detailed articles and blog posts categorized by technology themes.
-- Community forums for discussion and questions.
 - Regular updates and new content notifications.
 - User profiles for personalized experiences and content tracking.
 
-# Structural Plane
+## Structural Plane
 
 **Information Architecture:**
 - **Home Page:** Overview of the site, featured articles, and direct access to major categories.
@@ -294,22 +351,13 @@ Software Stacks aims to educate and engage users interested in various software 
 - Interactive elements such as buttons, links, and forms are designed for ease of use.
 - Visual cues (icons, color changes) for interactive elements to enhance user experience.
 
-**Wireframes:**
-- Home Page: Features a carousel of featured articles, a quick summary of categories, and a latest articles section.
-- Category Pages: List articles with brief summaries, sortable by popularity or date.
-- Post Detail Page: Rich content layout with sidebars for related articles and author info.
+## Skeleton & Surface Planes
 
-**Accessibility:**
-- Ensure all content and navigation is accessible with keyboard and screen readers.
-- Use appropriate ARIA labels and roles for dynamic content.
-
-These sections of the README provide a clear overview of what the project aims to achieve and how it's structured to meet the needs of its users. This structure not only helps developers and contributors understand the project's scope but also guides the end-users in navigating and making the most out of the platform.
-
-# Wireframes
+### Wireframes
 
 I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wireframes.
 
-### Home Page Wireframes
+#### Home Page Wireframes
 <details>
 <summary>Click to View Home Page wireframes</summary>
 
@@ -324,7 +372,7 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 
 </details>
 
-### Categories Page Wireframes
+#### Categories Page Wireframes
 <details>
 
 <summary>Click to View Categories Page wireframes</summary>
@@ -334,7 +382,7 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 
 </details>
 
-### Post Detail Page Wireframes
+#### Post Detail Page Wireframes
 <details>
 
 <summary>Click to View Post Detail Page wireframes</summary>
@@ -344,7 +392,7 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 
 </details>
 
-### About & Contact Page Wireframes
+#### About & Contact Page Wireframes
 <details>
 
 <summary>Click to View About & Contact Page wireframes</summary>
@@ -354,7 +402,7 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 
 </details>
 
-### Add Stack Page Wireframes
+#### Add Stack Page Wireframes
 <details>
 
 <summary>Click to View Add Stack Page wireframes</summary>
@@ -364,7 +412,7 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 
 </details>
 
-### Register Page Wireframes
+#### Register Page Wireframes
 <details>
 
 <summary>Click to View Register Page wireframes</summary>
@@ -374,7 +422,7 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 
 </details>
 
-### Login Page Wireframes
+#### Login Page Wireframes
 <details>
 
 <summary>Click to View Login Page wireframes</summary>
@@ -384,7 +432,7 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 
 </details>
 
-### Logout Page Wireframes
+#### Logout Page Wireframes
 <details>
 
 <summary>Click to View Logout Page wireframes</summary>
@@ -394,7 +442,7 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 
 </details>
 
-### My Bookmarks Page Wireframes
+#### My Bookmarks Page Wireframes
 <details>
 
 <summary>Click to View My Bookmarks Page wireframes</summary>
@@ -404,7 +452,7 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 
 </details>
 
-### My Likes Page Wireframes
+#### My Likes Page Wireframes
 <details>
 
 <summary>Click to View My Likes Page wireframes</summary>
@@ -414,7 +462,7 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 
 </details>
 
-### My Comments Page Wireframes
+#### My Comments Page Wireframes
 <details>
 
 <summary>Click to View My Comments Page wireframes</summary>
@@ -424,7 +472,7 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 
 </details>
 
-### My Posts Page Wireframes
+#### My Posts Page Wireframes
 <details>
 
 <summary>Click to View My Posts Page wireframes</summary>
@@ -434,7 +482,7 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 
 </details>
 
-# Database Schema - Entity Relationship Diagram
+## Database Schema - Entity Relationship Diagram
 
 I've used [dbdiagram](https://dbdiagram.io/home) to design my site's ERD.
 
@@ -475,44 +523,217 @@ The Entity Relationship Diagram (ERD) represents the database schema of Software
 
 The schema was designed with scalability in mind, ensuring that as the platform grows, new features and data types can be easily incorporated. For example, the separation of the `User` and `Profile` tables allows for flexible user management and the possibility to include additional user attributes in the future without altering the core user authentication system.
 
-**CSRF Tokens** 
+### Security
 
-CSRF (Cross-Site Request Forgery) tokens are included in every form to help authenticate the request with the server when the form is submitted. Absence of these tokens can leave a site vulnerable to attackers who may steal a users data.
+Security is a critical aspect, especially for a platform like Software Stacks that handles user-generated content and personal data.
 
-**AllAuth**  
+#### Data Encryption
+- All sensitive data, including user passwords and personal information, are encrypted using robust encryption methods to protect against unauthorized access and breaches.
 
-Django AllAuth is an installable framework that takes care of the user registration and authentication process. Authentication was needed to determine when a user was registered or unregistered and it controlled what content was accessible on **SoftwareStacks**
+#### CSRF Tokens
+- CSRF (Cross-Site Request Forgery) tokens are included in every form to help authenticate the request with the server when the form is submitted. Absence of these tokens can leave a site vulnerable to attackers who may steal a users data.
+
+#### AllAuth  
+
+- Django AllAuth is an installable framework that takes care of the user registration and authentication process. Authentication was needed to determine when a user was registered or unregistered and it controlled what content was accessible on **SoftwareStacks**
 
 # Features
 
-Software Stacks is designed with accessibility and user engagement in mind. The platform caters to both unregistered and registered users, offering a variety of features tailored to each user's experience.
+## Existing Features
 
-## User View - Registered/Unregistered
+### Features Functionality
 
-Software Stacks ensures that essential information is accessible to all users while encouraging registration for a more interactive experience. Here's how features are distributed:
+Software Stacks is a dynamic web application that allows users to engage with content across various technology domains. Below is a table highlighting its features, detailing the level of access for unregistered and registered users, and the CRUD (Create, Read, Update, Delete) functionalities available:
 
-| Feature           | Unregistered User              | Registered, Logged-In User          |
-|-------------------|--------------------------------|-------------------------------------|
-| Home Page         | Visible                        | Visible                             |
-| Profile           | Not visible - requires sign-up | Visible with full feature access    |
-| Blog Posts        | Visible - read-only access     | Visible with interactive capabilities (likes, comments, etc.) |
-| Categories        | Visible                        | Visible                             |
-| About & Contact   | Visible                        | Visible                             |
-| Authentication    | Only Sign Up/Login visible     | Sign Up/Login not visible; Logout available |
-| User Posts        | Not Visible                    | Visible - users can manage their own posts |
+| Feature                   | Unregistered User Access | Registered User Access         | CRUD Functionality               |
+|---------------------------|--------------------------|--------------------------------|----------------------------------|
+| **Landing Page**          | Viewable                 | Viewable                       | Read                             |
+| **Registration**          | Available                | N/A                            | Create                           |
+| **Login**                 | Available                | N/A                            | Create/Read                      |
+| **Browse Posts**          | Viewable                 | Viewable                       | Read                             |
+| **View Categories**       | Viewable                 | Viewable                       | Read                             |
+| **Post Details**          | Limited Interaction      | Full Interaction (like, comment, bookmark) | Read/Create/Update/Delete    |
+| **Profile Management**    | Not Available            | Available                      | Create/Read/Update/Delete        |
+| **Create New Post**       | Not Available            | Available                      | Create                           |
+| **Edit/Delete Post**      | Not Available            | Available (Own Posts)          | Update/Delete                    |
+| **Like Posts**            | Not Available            | Available                      | Create/Delete                    |
+| **Bookmark Posts**        | Not Available            | Available                      | Create/Delete                    |
+| **Comment on Posts**      | Not Available            | Available                      | Create/Update/Delete             |
+| **Search Functionality**  | Available                | Enhanced (user-specific results) | Read                             |
+| **User Interaction**      | Not Available            | Follow/Unfollow Users, Interact with Community | Create/Read/Delete             |
+| **About & Contact**       | Viewable                 | Viewable                       | Read                             |
+| **Search**            | Available                    | Available        | Not Available                    |                 |
 
-## CRUD Functionality
+---
 
-Software Stacks provides comprehensive CRUD (Create, Read, Update, Delete) functionalities, allowing users to fully interact with the platform's content and their own data.
+### CRUD Functionality
 
-| Feature      | Create           | Read             | Update           | Delete           |
-|--------------|------------------|------------------|------------------|------------------|
-| Blog Posts   | Registered users can add new posts | All users can view published posts | Authors can edit their unpublished or pending review posts | Authors can delete their own posts |
-| Comments     | Registered users can comment on posts | All users can read approved comments | Users can edit their own comments within a certain timeframe | Users can delete their own comments |
-| User Profile | Automatically created upon user registration | Users can view their profile | - | -  |
-| Categories   | Admin-created    | Visible to all users for post categorization | Admins can update category information | Admins can remove categories |
-| Likes          | Like posts        | View liked posts  | -                | Unlike posts     |
-| Bookmarks      | Bookmark posts    | View bookmarked posts | -            | Remove bookmarks |
+The table below describes the CRUD operations that can be performed on Software Stacks' main features by a registered, logged-in user.
+
+| Feature               | Create                    | Read                        | Update               | Delete                 |
+|-----------------------|---------------------------|-----------------------------|----------------------|------------------------|
+| **User Accounts**     | Sign up for a new account | View own and others' profiles | Edit own profile     | Deactivate/Delete account |
+| **Posts**             | Publish new posts         | Browse and read all posts  | Edit own posts       | Remove own posts       |
+| **Comments**          | Comment on posts          | View comments              | Edit own comments    | Delete own comments    |
+| **Likes**             | Like posts and comments   | See likes on posts/comments | -                    | Unlike posts/comments  |
+| **Bookmarks**         | Bookmark posts            | View bookmarked posts      | -                    | Remove bookmarks       |
+| **Search**            | -                         | Search posts/users         | -                    | -                      |
+
+Certainly, here's a detailed existing features section for Software Stacks using the provided template:
+
+### All Existing Features with Screenshots
+
+#### Home Page
+
+  - The initial point of contact with Software Stacks, where users can understand the platform's offerings. Featured articles, latest stacks, and prominent categories are displayed here.
+
+  ![Home Page Screenshot](documentation/screenshots/home.JPG)
+
+#### User Registration, Login, and Logout
+
+  - New users can sign up by providing their username, email, and password. Existing users can log in using their credentials to access personalized features.
+
+  **Registration/SignUp**
+      ![Sign Up Screenshot](documentation/screenshots/signup.JPG)
+
+  **Login/SignIn**
+      ![Login Screenshot](documentation/screenshots/signin.JPG)
+
+  **Logout/Signout**
+      ![Logout Screenshot](documentation/screenshots/signout.JPG)
+
+#### User Profile
+
+  - Upon logging in, users can view and edit their profiles, see their published stacks, and manage bookmarks and likes.
+
+  ![Profile Screenshot](documentation/screenshots/login2.JPG)
+  ![Profile Screenshot](documentation/screenshots/profile.JPG)
+
+#### Add Stack
+
+  - Registered users can contribute by creating their own stacks. They can include a title, content, images, and select categories for their stack.
+
+  ![Add Stack Screenshot](documentation/screenshots/add_stack.JPG)
+
+#### Search Functionality
+
+  - Both registered and unregistered users can search for specific stacks or browse categories using the search bar on the navigation menu.
+
+  ![Search Screenshot](documentation/screenshots/search.JPG)
+
+#### Stack Details
+
+  - Users can read detailed views of each stack, engage with content through likes, bookmarks, and comments.
+
+  ![Stack Details Screenshot](documentation/screenshots/postdetail.JPG)
+
+#### Comments and Interactions
+
+  - Users can leave comments on stacks, engage in discussions, and provide feedback to authors. They can also like and bookmark stacks for future reference.
+
+  ![Comments Screenshot](documentation/screenshots/leavecomment.JPG)
+  ![Comments Screenshot](documentation/screenshots/posting_comment-as.JPG)
+  ![Comments Screenshot](documentation/screenshots/approvedcomment.JPG)
+  ![Comments Screenshot](documentation/screenshots/unapprovedcomments.JPG)
+
+#### Responsive Navigation Bar
+
+  - The navigation bar provides easy access to all sections of the site, adjusts for different screen sizes, and includes user authentication options.
+
+  ![Navigation Bar Screenshot](documentation/screenshots/navbar2.JPG)
+  ![Navigation Bar Screenshot](documentation/screenshots/navbar.JPG)
+
+#### Categories
+
+  - Users can browse stacks by categories, such as Front-End Development, E-Commerce, and Predictive Analytics, to find content tailored to their interests.
+
+  ![Categories Screenshot](documentation/screenshots/categories.JPG)
+  ![Categories Screenshot](documentation/screenshots/cat_fed.JPG)
+  ![Categories Screenshot](documentation/screenshots/cat_ecom.JPG)
+  ![Categories Screenshot](documentation/screenshots/cat_pa.JPG)
+
+#### My Bookmarks
+
+  - Logged-in users have a personal bookmarks section where they can save stacks for later reading or reference. This personalized list helps users quickly access their favorite content.
+
+  ![My Bookmarks Screenshot](documentation/screenshots/bookmarkedposts.JPG)
+  ![My Bookmarks Screenshot](documentation/screenshots/empty-bookmark.JPG)
+
+#### My Likes
+
+    - The 'My Likes' feature allows users to revisit stacks they have liked. This feature encourages users to engage with content and authors they appreciate.
+
+  ![My Likes Screenshot](documentation/screenshots/likedposts.JPG)
+  ![My Likes Screenshot](documentation/screenshots/empty-liked.JPG)
+
+#### My Comments
+
+  - Users can review and manage their comments across different stacks. This section provides users with an overview of their contributions and engagements within the community.
+  
+  ![My Comments Screenshot](documentation/screenshots/commentedposts.JPG)
+  ![Comments Screenshot](documentation/screenshots/nocommentempty.JPG)
+
+#### My Posts
+
+  - Content creators can manage their stacks through 'My Posts'. They can view all their contributions, edit existing stacks, or delete any content they no longer wish to share.
+
+  ![My Posts Screenshot](documentation/screenshots/yourposts.JPG)
+  ![My Posts Screenshot](documentation/screenshots/noposts_empty.JPG)
+
+#### Footer
+
+  - The footer is consistent across the platform and offers additional navigation options, social media links, and legal information.
+
+  ![Footer Screenshot](documentation/screenshots/footer.JPG)
+
+#### Admin Panel
+
+  - Administrators have access to a backend panel where they can manage users, stacks, categories, and comments.
+
+  ![Admin Panel Screenshot](documentation/screenshots/allauth.JPG)
+
+#### Error Handling
+
+  - Custom error pages are designed to inform users of various errors such as 404 Not Found or 403 Forbidden, along with a user-friendly message and a link to navigate back home.
+
+  ![404 Error Page Screenshot](documentation/screenshots/404.JPG)
+  ![403 Error Page Screenshot](documentation/screenshots/403.JPG)
+
+## Future Features
+
+**Advanced Search Capabilities**
+- **Description**: Implement advanced search options to allow users to filter posts by date, popularity, and specific tags or categories.
+- **Benefit**: Helps users find the content they are interested in more efficiently.
+
+**User Profile Customization**
+- **Description**: Allow users to customize their profiles with themes, profile pictures, and bio information.
+- **Benefit**: Enhances user engagement and personalization on the platform.
+
+**Real-time Notifications**
+- **Description**: Introduce real-time notifications for likes, comments, and new posts from followed categories or authors.
+- **Benefit**: Keeps users informed and engaged with the content they care about most.
+
+**Mobile App**
+- **Description**: Develop a mobile application for iOS and Android to access Software Stacks on the go.
+- **Benefit**: Increases accessibility and user engagement by providing a convenient way to browse and interact with content from mobile devices.
+
+**API for Developers**
+- **Description**: Offer a public API that allows developers to access and integrate Software Stacks content into their own applications.
+- **Benefit**: Expands the platform’s reach and utility, fostering an ecosystem around Software Stacks content.
+
+**Multi-language Support**
+- **Description**: Add support for multiple languages to cater to a global audience.
+- **Benefit**: Makes the platform accessible to non-English speaking users, expanding the user base.
+
+**Dark Mode**
+- **Description**: Introduce a dark mode feature to enhance visual ergonomics by reducing eye strain in low-light conditions.
+- **Benefit**: Improves user comfort and accessibility, particularly during night-time browsing.
+
+**Forums and Discussion Boards**
+- **Description**: Implement forums and discussion boards where users can engage in deeper discussions and build community.
+- **Benefit**: Strengthens the community aspect of Software Stacks, making it a hub for like-minded enthusiasts to share and learn.
+
+These features are designed to enhance the functionality and user experience of Software Stacks, driving greater user engagement and expanding the platform’s capabilities.
 
 # Technology Used
 
@@ -532,14 +753,31 @@ Software Stacks provides comprehensive CRUD (Create, Read, Update, Delete) funct
 - [**GitHub**](https://github.com/): Hosts the repository and facilitates version control and collaboration.
 - [**Heroku**](https://www.heroku.com/): Platform as a service (PaaS) for deploying applications.
 
-### Others
-- [**Cloudinary**](https://cloudinary.com/): An end-to-end image and video management solution.
-- [**Favicon.io**](https://favicon.io/): To generate favicon icons for the website.
-- [**Font Awesome**](https://fontawesome.com/): Provides icons for enhancing UI/UX.
-
 ### Development Tools
 - [**GitPod**](https://www.gitpod.io/): Preferred IDE for writing and editing code.
 - [**Django Extensions**](https://github.com/django-extensions/django-extensions): Provides custom management extensions for Django.
+
+### Libraries and Frameworks
+
+- **asgiref (3.8.1)**: Supports asynchronous capabilities in Django, enabling better performance for asynchronous apps.
+- **cloudinary (1.36.0)**: Manages cloud-based image and video storage and optimizations, integrating seamlessly with web applications for media management.
+- **crispy-bootstrap5 (0.7)**: Allows Django forms to be styled effortlessly with Bootstrap 5, enhancing form presentation without extensive front-end coding.
+- **dj-database-url (0.5.0)**: Simplifies database configuration using a URL scheme, which is especially useful for deployments on platforms like Heroku.
+- **dj3-cloudinary-storage (0.0.6)**: Integrates Django projects with Cloudinary for handling static and media files storage.
+- **Django (4.2.11)**: The main web framework for the project, providing the necessary tools to build a secure, scalable, and maintainable web application.
+- **django-allauth (0.57.2)**: Adds authentication, registration, and account management capabilities, supporting both traditional and social authentication methods.
+- **django-bootstrap4 (24.1)**: Facilitates the use of Bootstrap 4 in Django templates for consistent and responsive design across the application.
+- **django-crispy-forms (2.1)**: Helps in rendering Django forms in a DRY (Don't Repeat Yourself) manner, allowing form styling through template packs.
+- **django-summernote (0.8.20.0)**: Provides a rich text editor for Django forms, enhancing text input fields with WYSIWYG editing capabilities.
+- **gunicorn (20.1.0)**: Serves as a Python WSGI HTTP Server for UNIX, enabling Django apps to handle more concurrent traffic.
+- **oauthlib (3.2.2)**: A generic implementation of OAuth for sharing authentication across services, used in conjunction with django-allauth.
+- **psycopg2 (2.9.9)**: Acts as a PostgreSQL database adapter for Python, essential for database operations in Django projects using PostgreSQL.
+- **PyJWT (2.8.0)**: A Python library for encoding, decoding, and verifying JSON Web Tokens (JWT), useful for stateless authentication mechanisms.
+- **python3-openid (3.2.0)**: Supports Python 3 applications in implementing OpenID authentication, often used in conjunction with django-allauth.
+- **requests-oauthlib (2.0.0)**: Combines the power of the `requests` library with `oauthlib` for OAuth 1 and OAuth 2 authentication of requests.
+- **sqlparse (0.4.4)**: A non-validating SQL parser for Python, which provides formatting and syntax analysis for SQL scripts used within Django.
+- **urllib3 (1.26.18)**: A powerful HTTP client for Python, used for making HTTP requests in various parts of the application.
+- **whitenoise (5.3.0)**: Simplifies static file management in Django by allowing the app to serve its own static files, improving performance and reducing complexity in production setups.
 
 ### Validation Tools
 - [**W3C Markup Validation Service**](https://validator.w3.org/): For validating HTML5 code.
@@ -547,4 +785,10 @@ Software Stacks provides comprehensive CRUD (Create, Read, Update, Delete) funct
 - [**JSHint**](https://jshint.com/): A tool that helps to detect errors and potential problems in JavaScript code.
 - [**CI Python Linter**](https://pep8ci.herokuapp.com/): Analyzes Python code to look for bugs and signs of poor quality.
 - [**Google Lighthouse**](https://developers.google.com/web/tools/lighthouse): For auditing performance, accessibility, and search engine optimization of web pages.
+- 
+### Others
+- [**Cloudinary**](https://cloudinary.com/): An end-to-end image and video management solution.
+- [**Favicon.io**](https://favicon.io/): To generate favicon icons for the website.
+- [**Font Awesome**](https://fontawesome.com/): Provides icons for enhancing UI/UX.
+
 

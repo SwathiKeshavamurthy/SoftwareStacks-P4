@@ -7,7 +7,7 @@
 
 Link to live website: [CLICK HERE!](https://software-stacks-442e4344b2ad.herokuapp.com/)
 
-![Am I Responsive Image]()
+![Am I Responsive Image](documentation/screenshots/responsive.JPG)
 
 # Introduction
 
@@ -114,6 +114,7 @@ Join Software Stacks today and become part of a community that's shaping the fut
     - [Libraries and Frameworks](#libraries-and-frameworks)
     - [Validation Tools](#validation-tools)
     - [Others](#others)
+- [Testing](#testing)
 
 # Overview
 
@@ -596,11 +597,11 @@ Certainly, here's a detailed existing features section for Software Stacks using
   **Registration/SignUp**
       ![Sign Up Screenshot](documentation/screenshots/signup.JPG)
 
-  **Login/SignIn**
-      ![Login Screenshot](documentation/screenshots/signin.JPG)
+  **Login/SignIn**  
+    ![Login Screenshot](documentation/screenshots/signin.JPG)
 
   **Logout/Signout**
-      ![Logout Screenshot](documentation/screenshots/signout.JPG)
+    ![Logout Screenshot](documentation/screenshots/signout.JPG)
 
 #### User Profile
 
@@ -790,5 +791,10 @@ These features are designed to enhance the functionality and user experience of 
 - [**Cloudinary**](https://cloudinary.com/): An end-to-end image and video management solution.
 - [**Favicon.io**](https://favicon.io/): To generate favicon icons for the website.
 - [**Font Awesome**](https://fontawesome.com/): Provides icons for enhancing UI/UX.
+- [**Tiny Png**](https://tinypng.com/): To compress the images.
+- [**Free Convert**](https://www.freeconvert.com/): To convert PNG, JPG, JPEG...images to Webp format.
 
+# Testing
+
+For all testing and validation, please refer to the [TESTING.md](TESTING.md) file.
 

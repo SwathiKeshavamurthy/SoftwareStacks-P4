@@ -2,6 +2,8 @@ from django.contrib import admin
 from .models import Post, Comment
 from django_summernote.admin import SummernoteModelAdmin
 
+
+# Register the Post model with customizations.
 @admin.register(Post)
 class PostAdmin(SummernoteModelAdmin):
     """
@@ -9,12 +11,16 @@ class PostAdmin(SummernoteModelAdmin):
     field filters, fields to prepopulate, and rich-text editor.
     """
 
-    list_display = ('title', 'slug', 'author', 'category', 'status', 'approved', 'created_on', 'updated_on',)
-    search_fields = ['title', 'content',]  
-    list_filter = ('status', 'approved', 'created_on', 'updated_on', 'author__username', 'category',) 
+    list_display = ('title', 'slug', 'author', 'category',
+                    'status', 'approved', 'created_on', 'updated_on',)
+    search_fields = ['title', 'content', ]
+    list_filter = ('status', 'approved', 'created_on',
+                   'updated_on', 'author__username', 'category',)
     prepopulated_fields = {'slug': ('title',)}
     summernote_fields = ('content',)
 
+
+# Register the Comment model with customizations.
 @admin.register(Comment)
 class CommentAdmin(admin.ModelAdmin):
     """

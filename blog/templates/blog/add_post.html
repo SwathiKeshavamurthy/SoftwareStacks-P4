@@ -11,11 +11,13 @@
         <form method="post" enctype="multipart/form-data" class="d-flex flex-column align-items-center">
             {% csrf_token %}
             {{ form.as_p }}
-            <button type="submit" class=" btn btn-custom btn-signup btn-lg dark-bg">{{ form.instance.pk|yesno:"Update,Submit" }}</button>
+            <div class="form-group mt-3">
+                <button type="submit" class="btn btn-primary me-2">{{ form.instance.pk|yesno:"Update,Submit"}}</button>
+                {% if form.instance.pk %}
+                <a href="{% url 'post_detail' slug=form.instance.slug %}" class="btn btn-danger">Cancel</a>
+                {% endif %}
+            </div>
             <br>
-            {% if form.instance.pk %}
-                <a href="{% url 'post_detail' slug=form.instance.slug %}" class="btn btn-secondary">Cancel</a>
-            {% endif %}
         </form>
     </div>
 </div>

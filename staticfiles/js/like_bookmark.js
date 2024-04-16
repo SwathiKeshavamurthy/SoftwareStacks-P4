@@ -1,3 +1,5 @@
+/*globals $:false */
+/* jshint esversion: 6 */
 $(document).ready(function() {
     $(".like-icon, .bookmark-icon").click(function() {
         var post_id = $(this).attr('data-post-id');

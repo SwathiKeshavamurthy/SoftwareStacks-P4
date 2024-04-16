@@ -226,7 +226,7 @@ def add_post(request):
             new_post.author = request.user
             new_post.save()
             messages.success(request, 'Post added successfully and is awaiting approval.')
-            return redirect('home')  # Redirect to a relevant page
+            return redirect('home')
     else:
         form = PostForm()
     return render(request, 'blog/add_post.html', {'form': form})
@@ -260,14 +260,13 @@ def edit_post(request, slug):
 
 
 @login_required
+@require_POST
 def delete_post(request, slug):
-    """
-    View for deleting existing posts.
-    """
     post = get_object_or_404(Post, slug=slug, author=request.user)
-    if not post.approved:
+    if post:
         post.delete()
         messages.success(request, "Post successfully deleted.")
+        return redirect('home')
     else:
-        messages.error(request, "Approved posts cannot be deleted.")
-    return redirect('user_posts')  # Redirect to the view showing the user's posts
+        messages.error(request, "You do not have permission to delete this post.")
+        return redirect('post_detail', slug=slug)

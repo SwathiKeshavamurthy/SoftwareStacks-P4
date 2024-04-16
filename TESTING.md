@@ -102,13 +102,13 @@ Below is a table summarizing the JavaScript validation results for specific file
 
 | Python File                | Results Screenshots                        | Errors | Warnings |
 |----------------------------|--------------------------------------------|--------|----------|
-| **views.py**               | ![screenshot](documentation/validation/about_views_py.JPG)   | 1      | 1        |
-| **models.py**              | ![screenshot](documentation/validation/about_models_py.JPG)  | 0      | 0        |
-| **forms.py**               | ![screenshot](documentation/validation/about_forms_py.JPG)   | 0      | 1        |
-| **urls.py**                | ![screenshot](documentation/validation/about_urls_py.JPG)     | 0      | 0        |
-| **admin.py**               | ![screenshot](documentation/validation/views_py.JPG)   | 2      | 1        |
-| **apps.py**              | ![screenshot](documentation/validation/models_py.JPG)  | 0      | 2        |
-| **forms.py**               | ![screenshot](documentation/validation/views_py.JPG)   | 2      | 1        |
+| **views.py**               | ![screenshot](documentation/validation/about-views.JPG)   | 1      | 1        |
+| **models.py**              | ![screenshot](documentation/validation/about-models.JPG)  | 0      | 0        |
+| **forms.py**               | ![screenshot](documentation/validation/about-forms.JPG)   | 0      | 1        |
+| **urls.py**                | ![screenshot](documentation/validation/about-urls.JPG)     | 0      | 0        |
+| **admin.py**               | ![screenshot](documentation/validation/about-admin.JPG)   | 2      | 1        |
+| **apps.py**              | ![screenshot](documentation/validation/about-apps.JPG)  | 0      | 2        |
+| **forms.py**               | ![screenshot](documentation/validation/about-forms.JPG)   | 2      | 1        |
 
 
 

@@ -74,8 +74,8 @@ Join Software Stacks today and become part of a community that's shaping the fut
       - [My Likes Page Wireframes](#my-likes-page-wireframes)
       - [My Comments Page Wireframes](#my-comments-page-wireframes)
       - [My Posts Page Wireframes](#my-posts-page-wireframes)
-  - [Database Schema - Entity Relationship Diagram](#database-schema---entity-relationship-diagram)
-    - [Database Schema](#database-schema)
+    - [Database Schema - Entity Relationship Diagram](#database-schema---entity-relationship-diagram)
+      - [Database Schema](#database-schema)
       - [Entity Relationship Diagram (ERD)](#entity-relationship-diagram-erd)
       - [Tables Overview](#tables-overview)
       - [Relationships](#relationships)
@@ -102,6 +102,7 @@ Join Software Stacks today and become part of a community that's shaping the fut
       - [My Likes](#my-likes)
       - [My Comments](#my-comments)
       - [My Posts](#my-posts)
+      - [Pagination](#pagination)
       - [Footer](#footer)
       - [Admin Panel](#admin-panel)
       - [Error Handling](#error-handling)
@@ -483,11 +484,11 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 
 </details>
 
-## Database Schema - Entity Relationship Diagram
+### Database Schema - Entity Relationship Diagram
 
 I've used [dbdiagram](https://dbdiagram.io/home) to design my site's ERD.
 
-### Database Schema
+#### Database Schema
 
 The Software Stacks application is structured on a robust database schema designed to facilitate the efficient organization and retrieval of data. Below is an overview of the database schema and the relationships between the different entities.
 
@@ -680,6 +681,13 @@ Certainly, here's a detailed existing features section for Software Stacks using
 
   ![My Posts Screenshot](documentation/screenshots/yourposts.JPG)
   ![My Posts Screenshot](documentation/screenshots/noposts_empty.JPG)
+
+#### Pagination
+
+  - Users can navigate through multiple pages of content seamlessly with pagination controls. This feature ensures that the website remains uncluttered and enhances user experience by dividing content into manageable and orderly sections. Users can easily move between pages using 'Previous', 'Next', or direct page number links.
+
+  ![My Pagination Screenshot](documentation/screenshots/pagination.JPG)
+  
 
 #### Footer
 

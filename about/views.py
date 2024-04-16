@@ -12,8 +12,13 @@ def about_me(request):
         contact_form = ContactForm(data=request.POST)
         if contact_form.is_valid():
             contact_form.save()
-            messages.add_message(request, messages.SUCCESS, "Contact Submitted Successfully! I endeavour to respond within 2 working days.")
-    
+            messages.add_message(
+                request,
+                messages.SUCCESS,
+                "Contact Submitted Successfully! "
+                "I endeavour to respond within 2 working days."
+            )
+
     about = About.objects.all().order_by('-updated_on').first()
     contact_form = ContactForm()
 

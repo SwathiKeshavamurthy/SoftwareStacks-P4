@@ -26,7 +26,7 @@ Below is a table summarizing the HTML validation results for various pages of th
 
 | HTML Source Code/Page        | Validation Results PDF                | Errors | Warnings |
 |------------------------------|---------------------------------------|--------|----------|
-| **Base Page**                | [View PDF](path/to/base-page.pdf) | 0      | 2        |
+| **Main Page**                | [View PDF](path/to/base-page.pdf) | 0      | 2        |
 | **Home Page**                | [View PDF](path/to/home-page.pdf) | 0      | 2        |
 | **About & Contact Page**     | [View PDF](path/to/about-page.pdf)| 1      | 1        |
 | **Categories Page**          | [View PDF](path/to/categories.pdf) | 1      | 1        |
@@ -44,7 +44,6 @@ Below is a table summarizing the HTML validation results for various pages of th
 | **404 Page**                 | [View PDF](path/to/404-page.pdf)   | 2      | 3        |
 | **500 Page**                 | [View PDF](path/to/500-page.pdf)   | 2      | 3        |
 
-
 - **Errors** are the actual HTML issues that need to be fixed as they may affect the functionality or appearance of the website.
 - **Warnings** are generally suggestions for best practices, which are not critical but could improve the code efficiency or accessibility.
 
@@ -55,7 +54,7 @@ Below is a table summarizing the HTML validation results for various pages of th
 
 ![CSS Screenshot](documentation/screenshots/css.JPG)
 
-**[CSS Results PDF](documentation/validation/css.pdf)**
+**[CSS Results PDF](https://github.com/SwathiKeshavamurthy/SoftwareStacks-P4/blob/main/documentation/validation/css.pdf)**
 
 
 #### JavaScript Validation
@@ -63,10 +62,55 @@ Below is a table summarizing the HTML validation results for various pages of th
 - **Purpose:** To detect errors and potential problems in the JavaScript code, making sure that all scripts run efficiently and are error-free.
 - **Process:** JavaScript code is run through JSLint/JSHint to identify issues related to syntax, deprecated methods, and other inefficiencies.
 
+Below is a table summarizing the JavaScript validation results for specific files within the Software Stacks website. 
+
+| JavaScript File              | Results Screenshots               | Errors | Warnings |
+|------------------------------|--------------------------------------|--------|----------|
+| **comments.js**                  | ![screenshot](documentation/validation/commentjs.JPG)  | 0      | 0        |
+| **like_bookmark.js**            | ![screenshot](documentation/validation/likejs.JPG) | 0  | 0        |
+| **post.js**         | ![screenshot](documentation/validation/postjs.JPG) | 0 | 0        |
+
+
 #### Python Validation
-- **Tool Used:** [Pylint](https://pep8ci.herokuapp.com/#)
+- **Tool Used:** [CI Python Linter](https://pep8ci.herokuapp.com/#)
 - **Purpose:** Analyzes Python source code to identify coding errors, enforce a coding standard, and look for code smells.
 - **Process:** Python code within Software Stacks is analyzed with Pylint to ensure adherence to coding standards and to improve code quality.
+
+**Project Module Python Validation Results**
+| Python File                | Results Screenshots                        | Errors | Warnings |
+|----------------------------|--------------------------------------------|--------|----------|
+| **settings.py**            | ![screenshot](documentation/validation/settings_py.JPG) | 1      | 0        |
+| **manage.py**            | ![screenshot](documentation/validation/settings_py.JPG) | 1      | 0        |
+| **urls.py**                | ![screenshot](documentation/validation/urls_py.JPG)     | 0      | 0        |
+| **views.py**                | ![screenshot](documentation/validation/urls_py.JPG)     | 0      | 0        |
+| **wsgi.py**                | ![screenshot](documentation/validation/wsgi_py.JPG)     | 0      | 1        |
+| **asgi.py**                | ![screenshot](documentation/validation/asgi_py.JPG)     | 0      | 0        |
+
+**Blog Module Python Validation Results**
+
+| Python File                | Results Screenshots                        | Errors | Warnings |
+|----------------------------|--------------------------------------------|--------|----------|
+| **views.py**               | ![screenshot](documentation/validation/views_py.JPG)   | 2      | 1        |
+| **models.py**              | ![screenshot](documentation/validation/models_py.JPG)  | 0      | 2        |
+| **forms.py**               | ![screenshot](documentation/validation/forms_py.JPG)   | 1      | 0        |
+| **urls.py**                | ![screenshot](documentation/validation/blog_urls_py.JPG)| 0      | 0        |
+| **admin.py**               | ![screenshot](documentation/validation/views_py.JPG)   | 2      | 1        |
+| **apps.py**              | ![screenshot](documentation/validation/models_py.JPG)  | 0      | 2        |
+| **forms.py**               | ![screenshot](documentation/validation/views_py.JPG)   | 2      | 1        |
+
+**About Module Python Validation Results**
+
+| Python File                | Results Screenshots                        | Errors | Warnings |
+|----------------------------|--------------------------------------------|--------|----------|
+| **views.py**               | ![screenshot](documentation/validation/about_views_py.JPG)   | 1      | 1        |
+| **models.py**              | ![screenshot](documentation/validation/about_models_py.JPG)  | 0      | 0        |
+| **forms.py**               | ![screenshot](documentation/validation/about_forms_py.JPG)   | 0      | 1        |
+| **urls.py**                | ![screenshot](documentation/validation/about_urls_py.JPG)     | 0      | 0        |
+| **admin.py**               | ![screenshot](documentation/validation/views_py.JPG)   | 2      | 1        |
+| **apps.py**              | ![screenshot](documentation/validation/models_py.JPG)  | 0      | 2        |
+| **forms.py**               | ![screenshot](documentation/validation/views_py.JPG)   | 2      | 1        |
+
+
 
 #### Lighthouse Scores
 - **Tool Used:** [Google Lighthouse](https://en.wikipedia.org/wiki/Google_Lighthouse)

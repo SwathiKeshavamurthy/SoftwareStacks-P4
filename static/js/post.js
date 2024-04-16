@@ -1,3 +1,4 @@
+/* jshint esversion: 6 */
 document.addEventListener('DOMContentLoaded', function() {
     const deletePostModalElement = document.getElementById('deletePostModal');
     const deletePostButton = deletePostModalElement.querySelector('#confirmDeletePost');

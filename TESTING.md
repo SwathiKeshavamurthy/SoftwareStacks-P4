@@ -5,8 +5,17 @@ This is the TESTING file for the [SoftwareStacks](https://software-stacks-442e43
 Return back to the [README.md](README.md) file.
 
 ## Testing  Table of Contents  
-- Testing
-  - Testing Table of Contents
+- [Testing](#testing)
+  - [Testing  Table of Contents](#testing--table-of-contents)
+  - [Validation](#validation)
+      - [HTML Validation](#html-validation)
+      - [CSS Validation](#css-validation)
+      - [JavaScript Validation](#javascript-validation)
+      - [Python Validation](#python-validation)
+      - [CSS Validation](#css-validation-1)
+      - [JavaScript Validation](#javascript-validation-1)
+      - [Lighthouse Scores](#lighthouse-scores)
+      - [Wave Accessibility Evaluation](#wave-accessibility-evaluation)
 
 
 ## Validation 
@@ -54,7 +63,7 @@ Below is a table summarizing the HTML validation results for various pages of th
 
 ![CSS Screenshot](documentation/screenshots/css.JPG)
 
-**[CSS Results PDF](https://github.com/SwathiKeshavamurthy/SoftwareStacks-P4/blob/main/documentation/validation/css.pdf)**
+**[CSS Validation Results PDF](https://github.com/SwathiKeshavamurthy/SoftwareStacks-P4/blob/main/documentation/validation/css.pdf)**
 
 
 #### JavaScript Validation
@@ -76,15 +85,15 @@ Below is a table summarizing the JavaScript validation results for specific file
 - **Purpose:** Analyzes Python source code to identify coding errors, enforce a coding standard, and look for code smells.
 - **Process:** Python code within Software Stacks is analyzed with Pylint to ensure adherence to coding standards and to improve code quality.
 
-**Project Module Python Validation Results**
-| Python File                | Results Screenshots                        | Errors | Warnings |
+**SoftwareStacks - Project Module Python Validation Results**
+| Python File   | Results Screenshots                        | Errors | Warnings |
 |----------------------------|--------------------------------------------|--------|----------|
-| **settings.py**            | ![screenshot](documentation/validation/settings_py.JPG) | 1      | 0        |
-| **manage.py**            | ![screenshot](documentation/validation/settings_py.JPG) | 1      | 0        |
-| **urls.py**                | ![screenshot](documentation/validation/urls_py.JPG)     | 0      | 0        |
-| **views.py**                | ![screenshot](documentation/validation/urls_py.JPG)     | 0      | 0        |
-| **wsgi.py**                | ![screenshot](documentation/validation/wsgi_py.JPG)     | 0      | 1        |
-| **asgi.py**                | ![screenshot](documentation/validation/asgi_py.JPG)     | 0      | 0        |
+| **settings.py**            | ![screenshot](documentation/validation/settings.JPG) | 0      | 0        |
+| **manage.py**            | ![screenshot](documentation/validation/manage.JPG) | 0      | 0        |
+| **urls.py**                | ![screenshot](documentation/validation/ss-urls.JPG)     | 0      | 0        |
+| **views.py**                | ![screenshot](documentation/validation/ss-views.JPG)     | 0      | 0        |
+| **wsgi.py**                | ![screenshot](documentation/validation/ss-wsgi.JPG)     | 0      | 0        |
+| **asgi.py**                | ![screenshot](documentation/validation/ss-asgi.JPG)     | 0      | 0        |
 
 **Blog Module Python Validation Results**
 
@@ -108,12 +117,54 @@ Below is a table summarizing the JavaScript validation results for specific file
 | **admin.py**               | ![screenshot](documentation/validation/about-admin.JPG)   | 0      | 0        |
 | **apps.py**              | ![screenshot](documentation/validation/about-apps.JPG)  | 0      | 0        |
 
+#### CSS Validation
+- **Tool Used:** [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
+- **Purpose:** Ensures that the CSS code used across the platform adheres to the standards set by the W3C and is free of errors.
+- **Process:** The CSS files are submitted to the W3C CSS Validator. Corrections are made based on feedback to improve performance and cross-browser compatibility.
+
+![CSS Screenshot](documentation/screenshots/css.JPG)
+
+**[CSS Validation Results PDF](https://github.com/SwathiKeshavamurthy/SoftwareStacks-P4/blob/main/documentation/validation/css.pdf)**
+
+
+#### JavaScript Validation
+- **Tool Used:** [JSLint/JSHint](https://jshint.com/)
+- **Purpose:** To detect errors and potential problems in the JavaScript code, making sure that all scripts run efficiently and are error-free.
+- **Process:** JavaScript code is run through JSLint/JSHint to identify issues related to syntax, deprecated methods, and other inefficiencies.
+
+Below is a table summarizing the JavaScript validation results for specific files within the Software Stacks website. 
+
+| JavaScript File              | Results Screenshots               | Errors | Warnings |
+|------------------------------|--------------------------------------|--------|----------|
+| **comments.js**                  | ![screenshot](documentation/validation/commentjs.JPG)  | 0      | 0        |
+| **like_bookmark.js**            | ![screenshot](documentation/validation/likejs.JPG) | 0  | 0        |
+| **post.js**         | ![screenshot](documentation/validation/postjs.JPG) | 0 | 0        |
+
 #### Lighthouse Scores
 - **Tool Used:** [Google Lighthouse](https://en.wikipedia.org/wiki/Google_Lighthouse)
 - **Purpose:** To assess the quality of web pages in terms of performance, accessibility, progressive web apps, SEO, and best practices.
 - **Process:** Software Stacks is tested with Google Lighthouse, which provides a detailed report on various aspects of the site’s performance and offers recommendations for improvement.
 
+| HTML Page / Source           |     Lighthouse Report Screenshot     | 
+|------------------------------|--------------------------------------|
+| ***Home Page**                | ![screenshot](documentation/validation/lighthouse/home1.JPG) |  
+| **About & Contact Page**     | ![screenshot](documentation/validation/lighthouse/aboutcontact.JPG) | 
+| **Categories Page**          | ![screenshot](documentation/validation/lighthouse/catpa.JPG) |
+| **Search Results Page**      | ![screenshot](documentation/validation/lighthouse/search.JPG) | 
+| **Register Page**            | ![screenshot](documentation/validation/lighthouse/signup.JPG) | 
+| **Login Page**               | ![screenshot](documentation/validation/lighthouse/signin.JPG) | 
+| **Logout Page**              | ![screenshot](documentation/validation/lighthouse/signout.JPG) | 
+| **Post Detail**              | ![screenshot](documentation/validation/lighthouse/examplepostdetail.JPG) | 
+| **Add Stack Page**           | ![screenshot](documentation/validation/lighthouse/addpost.JPG) | 
+| **My Bookmarks Page**        | ![screenshot](documentation/validation/lighthouse/bookmarks.JPG) | 
+| **My Likes Page**            | ![screenshot](documentation/validation/lighthouse/liked.JPG) | 
+| **My Comments Page**         | ![screenshot](documentation/validation/lighthouse/comments.JPG) | 
+| **My Posts Page**            | ![screenshot](documentation/validation/lighthouse/posts.JPG) | 
+
+
 #### Wave Accessibility Evaluation
-- **Tool Used:** [Wave Web Accessibility Evaluation Tool](https://en.wikipedia.org/wiki/WebAIM)
+- **Tool Used:** [Wave Web Accessibility Evaluation Tool](https://wave.webaim.org/)
 - **Purpose:** To ensure that the website is accessible to individuals with disabilities by identifying and suggesting fixes for web accessibility issues.
 - **Process:** The Wave tool evaluates each page of Software Stacks to ensure it complies with accessibility standards like WCAG and Section 508.
+
+![Wave Web Accessibility Evaluation Tool](documentation/validation/wave.JPG)

@@ -81,7 +81,10 @@ class Post(models.Model):
             else:
                 # As a last resort, append the length of posts
                 # to ensure uniqueness
-                self.slug = (f'{original_slug}-{Post.objects.annotate(text_len=Length("title")).count()}')
+                self.slug = (
+                 f'{original_slug}-'
+                 f'{Post.objects.annotate(text_len=Length("title")).count()}'
+                )
         super(Post, self).save(*args, **kwargs)
 
 

@@ -3,7 +3,9 @@ from django.http import (
 )
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.http import require_POST
-from django.shortcuts import render, get_object_or_404, redirect, reverse
+from django.shortcuts import (
+    render, get_object_or_404, redirect, reverse
+)
 from django.views import generic
 from django.contrib import messages
 from .models import Post, Comment
@@ -56,8 +58,8 @@ def post_detail(request, slug):
             "post": post,
             "comments": comments,
             "comment_count": comment_count,
-            "likes_count": likes_count, 
-            "bookmarks_count": bookmarks_count, 
+            "likes_count": likes_count,
+            "bookmarks_count": bookmarks_count,
             "comment_form": comment_form,
         },
     )
@@ -67,7 +69,10 @@ def category_posts(request, category_name):
     """
     View for displaying posts filtered by category.
     """
-    posts = Post.objects.filter(category=category_name, status=1).order_by('-created_on')
+    posts = Post.objects.filter(
+        category=category_name, status=1
+    ).order_by('-created_on')
+
     context = {
         'category_name': category_name,
         'posts': posts
@@ -81,7 +86,8 @@ def bookmarked_posts(request):
     View for displaying the user's bookmarked posts.
     """
     if request.method == 'GET':
-        posts = Post.objects.filter(bookmarks=request.user).order_by('-created_on')
+        posts = Post.objects.filter(
+            bookmarks=request.user).order_by('-created_on')
         return render(request, 'blog/bookmarked_posts.html', {'posts': posts})
 
 
@@ -101,7 +107,8 @@ def user_posts(request):
     View for displaying posts authored by the current user.
     """
     if request.method == 'GET':
-        posts = Post.objects.filter(author=request.user).order_by('-created_on')
+        posts = Post.objects.filter(
+            author=request.user).order_by('-created_on')
         return render(request, 'blog/user_posts.html', {'posts': posts})
 
 
@@ -121,7 +128,11 @@ def like_post(request):
             post.likes.add(request.user)
             liked = True
             message = 'Post liked.'
-        return JsonResponse({'liked': liked, 'likes_count': post.likes.count(), 'message': message})
+        return JsonResponse({
+            'liked': liked,
+            'likes_count': post.likes.count(),
+            'message': message
+        })
     else:
         return JsonResponse({'error': 'Invalid request method'})
 
@@ -142,7 +153,11 @@ def bookmark_post(request):
             post.bookmarks.add(request.user)
             bookmarked = True
             message = 'Post bookmarked.'
-        return JsonResponse({'bookmarked': bookmarked, 'bookmarks_count': post.bookmarks.count(), 'message': message})
+        return JsonResponse({
+            'bookmarked': bookmarked,
+            'bookmarks_count': post.bookmarks.count(),
+            'message': message
+        })
     else:
         return JsonResponse({'error': 'Invalid request method'})
 
@@ -153,8 +168,10 @@ def commented_posts(request):
     View for displaying posts commented on by the current user.
     """
     if request.method == 'GET':
-        commented_post_ids = Comment.objects.filter(author=request.user).values_list('post_id', flat=True)
-        posts = Post.objects.filter(id__in=commented_post_ids).order_by('-created_on')
+        commented_post_ids = Comment.objects.filter(
+            author=request.user).values_list('post_id', flat=True)
+        posts = Post.objects.filter(
+            id__in=commented_post_ids).order_by('-created_on')
         return render(request, 'blog/commented_posts.html', {'posts': posts})
 
 
@@ -176,8 +193,8 @@ def comment_edit(request, slug, comment_id):
             comment.save()
             messages.add_message(request, messages.SUCCESS, 'Comment Updated!')
         else:
-            messages.add_message(request, messages.ERROR, 'Error updating comment!')
-
+            messages.add_message(
+                request, messages.ERROR, 'Error updating comment!')
     return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
 
@@ -193,8 +210,8 @@ def comment_delete(request, slug, comment_id):
         comment.delete()
         messages.add_message(request, messages.SUCCESS, 'Comment deleted!')
     else:
-        messages.add_message(request, messages.ERROR, 'You can only delete your own comments!')
-
+        messages.add_message(
+            request, messages.ERROR, 'You can only delete your own comments!')
     return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
 
@@ -209,9 +226,9 @@ def search_posts(request):
             status=1
         ).distinct()
     else:
-        posts = Post.objects.none()  # Return an empty QuerySet if no query is specified
-
-    return render(request, 'blog/search_results.html', {'posts': posts, 'query': query})
+        posts = Post.objects.none()  # Return an empty QuerySet if no query
+    return render(
+        request, 'blog/search_results.html', {'posts': posts, 'query': query})
 
 
 @login_required
@@ -225,7 +242,8 @@ def add_post(request):
             new_post = form.save(commit=False)
             new_post.author = request.user
             new_post.save()
-            messages.success(request, 'Post added successfully and is awaiting approval.')
+            messages.success(
+                request, 'Post added successfully and is awaiting approval.')
             return redirect('home')
     else:
         form = PostForm()
@@ -262,11 +280,15 @@ def edit_post(request, slug):
 @login_required
 @require_POST
 def delete_post(request, slug):
+    """
+    View for deleting existing posts.
+    """
     post = get_object_or_404(Post, slug=slug, author=request.user)
     if post:
         post.delete()
         messages.success(request, "Post successfully deleted.")
         return redirect('home')
     else:
-        messages.error(request, "You do not have permission to delete this post.")
+        messages.error(
+            request, "You do not have permission to delete this post.")
         return redirect('post_detail', slug=slug)

@@ -108,14 +108,28 @@ Join Software Stacks today and become part of a community that's shaping the fut
       - [Error Handling](#error-handling)
   - [Future Features](#future-features)
 - [Technology Used](#technology-used)
-    - [Frontend](#frontend)
-    - [Backend](#backend)
-    - [Deployment and Version Control](#deployment-and-version-control)
-    - [Development Tools](#development-tools)
-    - [Libraries and Frameworks](#libraries-and-frameworks)
-    - [Validation Tools](#validation-tools)
-    - [Others](#others)
+  - [Frontend](#frontend)
+  - [Backend](#backend)
+  - [Deployment and Version Control](#deployment-and-version-control)
+  - [Development Tools](#development-tools)
+  - [Libraries and Frameworks](#libraries-and-frameworks)
+  - [Validation Tools](#validation-tools)
+  - [Others](#others)
 - [Testing](#testing)
+- [Deployment](#deployment)
+  - [GitHub](#github)
+  - [Gitpod](#gitpod)
+  - [Heroku](#heroku)
+  - [ElephantSQL](#elephantsql)
+  - [Cloudinary](#cloudinary)
+- [Cloning and Forking](#cloning-and-forking)
+  - [Cloning the Repository](#cloning-the-repository)
+  - [Forking the Repository](#forking-the-repository)
+- [Credits](#credits)
+  - [Code](#code)
+  - [Media](#media)
+  - [Additional reading/tutorials/books/blogs](#additional-readingtutorialsbooksblogs)
+  - [Acknowledgements](#acknowledgements)
 
 # Overview
 
@@ -754,27 +768,27 @@ These features are designed to enhance the functionality and user experience of 
 
 # Technology Used
 
-### Frontend
+## Frontend
 - [**HTML5**](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5): Structure of the web pages.
 - [**CSS3**](https://developer.mozilla.org/en-US/docs/Web/CSS): Styling of the web content.
 - [**JavaScript**](https://developer.mozilla.org/en-US/docs/Web/JavaScript): Enhancements of interactivity and web behaviors.
 - [**Bootstrap**](https://getbootstrap.com/): Responsive design and layout framework.
 
-### Backend
+## Backend
 - [**Django**](https://www.djangoproject.com/): A high-level Python web framework.
 - [**Python**](https://www.python.org/): Backend programming language.
 - [**SQLite**](https://www.sqlite.org/index.html) (Development) / [**PostgreSQL**](https://www.postgresql.org/) (Production): Database systems.
 
-### Deployment and Version Control
+## Deployment and Version Control
 - [**Git**](https://git-scm.com/): Used for version control.
 - [**GitHub**](https://github.com/): Hosts the repository and facilitates version control and collaboration.
 - [**Heroku**](https://www.heroku.com/): Platform as a service (PaaS) for deploying applications.
 
-### Development Tools
+## Development Tools
 - [**GitPod**](https://www.gitpod.io/): Preferred IDE for writing and editing code.
 - [**Django Extensions**](https://github.com/django-extensions/django-extensions): Provides custom management extensions for Django.
 
-### Libraries and Frameworks
+## Libraries and Frameworks
 
 - **asgiref (3.8.1)**: Supports asynchronous capabilities in Django, enabling better performance for asynchronous apps.
 - **cloudinary (1.36.0)**: Manages cloud-based image and video storage and optimizations, integrating seamlessly with web applications for media management.
@@ -796,14 +810,14 @@ These features are designed to enhance the functionality and user experience of 
 - **urllib3 (1.26.18)**: A powerful HTTP client for Python, used for making HTTP requests in various parts of the application.
 - **whitenoise (5.3.0)**: Simplifies static file management in Django by allowing the app to serve its own static files, improving performance and reducing complexity in production setups.
 
-### Validation Tools
+## Validation Tools
 - [**W3C Markup Validation Service**](https://validator.w3.org/): For validating HTML5 code.
 - [**W3C CSS Validation Service**](https://jigsaw.w3.org/css-validator/): For validating CSS3 code.
 - [**JSHint**](https://jshint.com/): A tool that helps to detect errors and potential problems in JavaScript code.
 - [**CI Python Linter**](https://pep8ci.herokuapp.com/): Analyzes Python code to look for bugs and signs of poor quality.
 - [**Google Lighthouse**](https://developers.google.com/web/tools/lighthouse): For auditing performance, accessibility, and search engine optimization of web pages.
 - 
-### Others
+## Others
 - [**Cloudinary**](https://cloudinary.com/): An end-to-end image and video management solution.
 - [**Favicon.io**](https://favicon.io/): To generate favicon icons for the website.
 - [**Font Awesome**](https://fontawesome.com/): Provides icons for enhancing UI/UX.
@@ -814,3 +828,120 @@ These features are designed to enhance the functionality and user experience of 
 
 For all testing and validation, please refer to the [TESTING.md](TESTING.md) file.
 
+# Deployment
+
+The deployment process for Software Stacks involves multiple platforms including GitHub, Gitpod, Heroku, ElephantSQL, and Cloudinary. Here's how each part fits into the deployment process:
+Below are the respective URLs for the platforms and services used in deploying and managing the Software Stacks application:
+
+## GitHub
+- **Repository Setup:** Initially, a GitHub repository is created to host all project code and documentation. This repository is the central hub for version control and collaboration.
+[GitHub](https://github.com)
+
+## Gitpod
+- **Development Environment:** Gitpod is used as a cloud-based IDE for writing, running, and debugging the code. It is directly integrated with GitHub, allowing seamless pulls and pushes to the repository. [Gitpod](https://www.gitpod.io/)
+
+## Heroku
+- **Application Hosting:** Heroku is used to deploy the live application. It is connected to the GitHub repository for continuous deployment. Every push to the main branch triggers a deployment process.
+[Heroku](https://www.heroku.com)
+  - **Setting up on Heroku:**
+    1. Create a new app on Heroku.
+    2. Connect the Heroku app to the GitHub repository.
+    3. Set up Config Vars in Heroku including `DATABASE_URL`, `SECRET_KEY`, `CLOUDINARY_URL`, `DISABLE_COLLECTSTATIC`, 	1 (this is temporary, and can be removed for the final deployment) etc.
+    4. Deploy the main branch using the Heroku dashboard or enable automatic deployments for every push to the main branch.
+    5. 
+**For deployment Heroku needs two additional files in order to deploy properly.**
+- requirements.txt
+- Procfile
+  
+You can install this project's requirements (where applicable) using:
+
+- **pip3 install -r requirements.txt**
+
+If you have your own packages that have been installed, then the requirements file needs updated using:
+
+- **pip3 freeze --local > requirements.txt**
+
+**The Procfile can be created with the following command:**
+
+echo web: gunicorn app_name.wsgi > Procfile
+replace app_name with the name of your primary Django app name; the folder where settings.py is located
+
+## ElephantSQL
+- **Database Hosting:** ElephantSQL provides a PostgreSQL database service, which is used by the Django application. The `DATABASE_URL` from ElephantSQL is set in the Heroku config vars to connect the application to the database. 
+
+This project uses [ElephantSQL](https://www.elephantsql.com) for the PostgreSQL Database.
+
+To obtain your own Postgres Database, sign-up with your GitHub account, then follow these steps:
+- Click **Create New Instance** to start a new database.
+- Provide a name (this is commonly the name of the project: tribe).
+- Select the **Tiny Turtle (Free)** plan.
+- You can leave the **Tags** blank.
+- Select the **Region** and **Data Center** closest to you.
+- Once created, click on the new database name, where you can view the database URL and Password.
+
+## Cloudinary
+- **Media Storage:** Cloudinary is used for hosting media files like images. It removes the load of serving static files from Heroku, ensuring better performance and scalability. [Cloudinary](https://cloudinary.com/)
+  - **Integration:**
+    1. Set up a Cloudinary account.
+    2. Configure the Cloudinary settings in the Django settings file with the API keys provided by Cloudinary.
+    3. Use Django’s storage backend for Cloudinary to handle media uploads.
+
+# Cloning and Forking
+
+## Cloning the Repository
+- **Local Setup:**
+  1. Clone the repository: [GitHub repository](https://github.com/SwathiKeshavamurthy/SoftwareStacks-P4). 
+ `git clone https://github.com/SwathiKeshavamurthy/SoftwareStacks-P4`.
+  2. Navigate into the project directory: `cd software-stacks-p4`
+  3. Install dependencies: `pip install -r requirements.txt`
+  4. Set up local environment variables in a `.env` file.
+  5. Run migrations: `python manage.py migrate`
+  6. Start the development server: `python manage.py runserver`
+
+Alternatively, if using Gitpod, you can click below to create your own workspace using this repository.
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://swathikesha-softwaresta-yuwx4g4ondz.ws-eu110.gitpod.io/)
+
+Please note that in order to directly open the project in Gitpod, you need to have the browser extension installed.
+A tutorial on how to do that can be found [here](https://www.gitpod.io/docs/configure/user-settings/browser-extension).
+
+
+## Forking the Repository
+- **For Contributions:**
+  1. Fork the repository on [GitHub repository](https://github.com/SwathiKeshavamurthy/SoftwareStacks-P4).
+  2. Clone your forked repository to your local machine.
+  3. Follow the local setup steps as above.
+  4. Make changes and push them back to your fork.
+  5. Create a pull request from your fork back to the original repo.
+
+# Credits
+
+## Code
+
+The following blogs/tutorials complemented my learning for this project:
+
+- [Django Docs](https://www.djangoproject.com/)
+- [Bootstrap Docs](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
+- [Blog Article](<https://www.sankalpjonna.com/learn-django/how-to-override-the-save-method-in-your-django-models>)
+- [StackOverflow](<https://stackoverflow.com/questions/11754877/troubleshooting-related-field-has-invalid-lookup-icontains>)
+- [Very Academy](<https://www.youtube.com/watch?v=H4QPHLmsZMU>)
+- [StackOverflow for Pagination ](<https://stackoverflow.com/questions/30864011/display-only-some-of-the-page-numbers-by-django-pagination>)
+
+## Media
+
+The following sites were used to gather the photographic media used:
+- [Freepik](https://www.freepik.com/)
+
+## Additional reading/tutorials/books/blogs
+
+- [Dee Mc](https://www.youtube.com/watch?v=sBjbty691eI&list=PLXuTq6OsqZjbCSfiLNb2f1FOs8viArjWy) for Django
+- [Geeks for Geeks](https://www.geeksforgeeks.org/python-programming-language/?ref=ghm) for additional Python learning.
+- PP4 walkthrough projects.
+- Used Google for website text and post content.
+
+## Acknowledgements
+
+- Many thanks to **my husband and son** for their continued support.
+- Thank you to my Code Institute mentor **Jack Wachira** for his positive support, guidance and advice.
+- Thanks to **Kristyna**, Cohort facilitator at Code Institute how she always there to give all the infromation needed and for keeping positive the energy up.
+- Thanks to my **fellow students** for constantly inspiring on slack and being there for each other to help in trouble.

@@ -50,7 +50,7 @@ Below is a table summarizing the HTML validation results for various pages of th
 | **Login Page**               | [View PDF](https://github.com/SwathiKeshavamurthy/SoftwareStacks-P4/blob/main/documentation/validation/html/signin.pdf) | 0      | 0        |
 | **Logout Page**              | [View PDF](https://github.com/SwathiKeshavamurthy/SoftwareStacks-P4/blob/main/documentation/validation/html/signout.pdf)| 0     | 0        |
 | **Post Detail**              | [View PDF](https://github.com/SwathiKeshavamurthy/SoftwareStacks-P4/blob/main/documentation/validation/html/postdetail.pdf)| 28      | 0        |
-| **Add Stack Page**           | [View PDF](https://github.com/SwathiKeshavamurthy/SoftwareStacks-P4/blob/main/documentation/validation/html/addpost.pdf)  | 0      | 0        |
+| **Add Post Page**           | [View PDF](https://github.com/SwathiKeshavamurthy/SoftwareStacks-P4/blob/main/documentation/validation/html/addpost.pdf)  | 0      | 0        |
 | **My Bookmarks Page**        | [View PDF](https://github.com/SwathiKeshavamurthy/SoftwareStacks-P4/blob/main/documentation/validation/html/mybookmarks.pdf)| 0   | 0        |
 | **My Likes Page**            | [View PDF](https://github.com/SwathiKeshavamurthy/SoftwareStacks-P4/blob/main/documentation/validation/html/mylikes.pdf) | 0      | 0        |
 | **My Comments Page**         | [View PDF](https://github.com/SwathiKeshavamurthy/SoftwareStacks-P4/blob/main/documentation/validation/html/mycomments.pdf)| 0   | 0        |
@@ -171,7 +171,7 @@ Below is a table summarizing the JavaScript validation results for specific file
 | **Login Page**               | ![screenshot](documentation/validation/lighthouse/signin.JPG) | 
 | **Logout Page**              | ![screenshot](documentation/validation/lighthouse/signout.JPG) | 
 | **Post Detail**              | ![screenshot](documentation/validation/lighthouse/examplepostdetail.JPG) | 
-| **Add Stack Page**           | ![screenshot](documentation/validation/lighthouse/addpost.JPG) | 
+| **Add Post Page**           | ![screenshot](documentation/validation/lighthouse/addpost.JPG) | 
 | **My Bookmarks Page**        | ![screenshot](documentation/validation/lighthouse/bookmarks.JPG) | 
 | **My Likes Page**            | ![screenshot](documentation/validation/lighthouse/liked.JPG) | 
 | **My Comments Page**         | ![screenshot](documentation/validation/lighthouse/comments.JPG) | 
@@ -197,7 +197,7 @@ Rigorous testing was conducted on all forms throughout Software Stacks to ensure
 |--------------------|---------|---------------|------------------|-----------|-------|
 | Registration Form  | Yes     | Submit form   | User receives confirmation message and is redirected to the profile page | Pass      | ![screenshot](documentation/validation/testing/siginup.JPG)     |
 | Login Form         | Yes     | Submit credentials | User is logged in and redirected to the homepage | Pass      | ![screenshot](documentation/validation/testing/signin.JPG)     |
-| Add Stack Form          | Yes     | Create post   | Post is created and submitted for review | Pass      | ![screenshot](documentation/validation/testing/addpostfieldmissing.JPG)     |
+| Add Post Form          | Yes     | Create post   | Post is created and submitted for review | Pass      | ![screenshot](documentation/validation/testing/addpostfieldmissing.JPG)     |
 | Contact Form  | Yes     | Submit form   | User receives confirmation message  | Pass      | ![screenshot](documentation/validation/testing/contactus.JPG)     |
 | Comment Form       | Yes     | Submit comment | Comment is added to the post awaiting moderation | Pass      | ![screenshot](documentation/validation/testing/postingcommentas.JPG)     |
 
@@ -220,7 +220,7 @@ Rigorous testing was conducted on all forms throughout Software Stacks to ensure
 | Form Error Handling                   | Yes     | Invalid Inputs               | Forms handle errors with descriptive messages guiding the user.                  | Pass      | -                    |
 | Logout Functionality                  | Yes     | Click                        | Users can log out successfully with a confirmation message.                      | Pass      | -                    |
 | Footer Social Media Icons             | Yes     | Click                        | Social media icons link to external pages in a new tab.                          | Pass      | -                    |
-| Responsive Design Elements            | Yes     | Resize/Change Orientation    | All elements resize and stack appropriately for different screen sizes.          | Pass      | -                    |
+| Responsive Design Elements            | Yes     | Resize/Change Orientation    | All elements resize and post appropriately for different screen sizes.          | Pass      | -                    |
 | Accessibility Features (e.g., ARIA)   | Yes     | Use of assistive technology  | ARIA labels and roles are present, ensuring accessibility compliance.            | Pass      | -                    |
 
 
@@ -245,8 +245,8 @@ This table documents the Django messages used throughout the Software Stacks web
 | User Registration Success | Success   | "Welcome to Software Stacks! Your account is created." | After user form submission      | ![screenshot](documentation/validation/testing/signed-in-msg.JPG)   |
 | Login Success  | Success      | "Logged in successfully. Welcome back!"  | After user authentication       | ![screenshot](documentation/validation/testing/signed-in-msg.JPG)   |
 | Logout Action  | Success      | "You have been logged out successfully."   | After user clicks logout        |  ![screenshot](documentation/validation/testing/signed-out-msg.JPG)   |
-| Post/Stack Submission Success            | Success      | "Your Post has been submitted for review."         | After submitting an article form|  ![screenshot](documentation/validation/testing/post-added-and-awaiting-msg.JPG)   |
-| Post/Stack Review Status            | Success      | "Your Post has been submitted for review."         | After submitting an article form|  ![screenshot](documentation/validation/testing/post-pending-msg.JPG)   ![screenshot](documentation/validation/testing/post-rejected-msg.JPG)  ![screenshot](documentation/validation/testing/post-accepted-msg.JPG) |
+| Post Submission Success            | Success      | "Your Post has been submitted for review."         | After submitting an article form|  ![screenshot](documentation/validation/testing/post-added-and-awaiting-msg.JPG)   |
+| Post Review Status            | Success      | "Your Post has been submitted for review."         | After submitting an article form|  ![screenshot](documentation/validation/testing/post-pending-msg.JPG)   ![screenshot](documentation/validation/testing/post-rejected-msg.JPG)  ![screenshot](documentation/validation/testing/post-accepted-msg.JPG) |
 | Comment Added                         | Success      | "Your comment has been added and is awaiting approval."| After submitting a comment     | ![screenshot](documentation/validation/testing/leavecomment.JPG) ![screenshot](documentation/validation/testing/postingas.JPG) ![screenshot](documentation/validation/testing/comment-awaiting-approval.JPG)   |
 | Comment Updated                         | Success      | "Your comment has been Updated."| After updating a comment     |  ![screenshot](documentation/validation/testing/comment-updated-msg.JPG)   |
 | Comment Deleted                         | Success      | "Your comment has been Deleted."| After deleting a comment     |  ![screenshot](documentation/validation/testing/post-deleted-succesfully-msg.JPG)   |

@@ -66,7 +66,7 @@ Join Software Stacks today and become part of a community that's shaping the fut
       - [Categories Page Wireframes](#categories-page-wireframes)
       - [Post Detail Page Wireframes](#post-detail-page-wireframes)
       - [About \& Contact Page Wireframes](#about--contact-page-wireframes)
-      - [Add Stack Page Wireframes](#add-stack-page-wireframes)
+      - [Add Post Page Wireframes](#add-post-page-wireframes)
       - [Register Page Wireframes](#register-page-wireframes)
       - [Login Page Wireframes](#login-page-wireframes)
       - [Logout Page Wireframes](#logout-page-wireframes)
@@ -92,9 +92,9 @@ Join Software Stacks today and become part of a community that's shaping the fut
       - [Home Page](#home-page)
       - [User Registration, Login, and Logout](#user-registration-login-and-logout)
       - [User Profile](#user-profile)
-      - [Add Stack](#add-stack)
+      - [Add Post](#add-post)
       - [Search Functionality](#search-functionality)
-      - [Stack Details](#stack-details)
+      - [Post Details](#post-details)
       - [Comments and Interactions](#comments-and-interactions)
       - [Responsive Navigation Bar](#responsive-navigation-bar)
       - [Categories](#categories)
@@ -412,10 +412,10 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 
 </details>
 
-#### Add Stack Page Wireframes
+#### Add Post Page Wireframes
 <details>
 
-<summary>Click to View Add Stack Page wireframes</summary>
+<summary>Click to View Add Post Page wireframes</summary>
 
 **Desktop**
 ![wireframes](documentation/wireframes/add_stack.JPG)
@@ -619,11 +619,11 @@ Certainly, here's a detailed existing features section for Software Stacks using
   ![Profile Screenshot](documentation/screenshots/login2.JPG)
   ![Profile Screenshot](documentation/screenshots/profile.JPG)
 
-#### Add Stack
+#### Add Post
 
-  - Registered users can contribute by creating their own stacks. They can include a title, content, images, and select categories for their stack.
+  - Registered users can contribute by creating their own stacks. They can include a title, content, images, and select categories for their Post.
 
-  ![Add Stack Screenshot](documentation/screenshots/add_stack.JPG)
+  ![Add Post Screenshot](documentation/screenshots/add_stack.JPG)
 
 #### Search Functionality
 
@@ -631,11 +631,11 @@ Certainly, here's a detailed existing features section for Software Stacks using
 
   ![Search Screenshot](documentation/screenshots/search.JPG)
 
-#### Stack Details
+#### Post Details
 
-  - Users can read detailed views of each stack, engage with content through likes, bookmarks, and comments.
+  - Users can read detailed views of each post, engage with content through likes, bookmarks, and comments.
 
-  ![Stack Details Screenshot](documentation/screenshots/postdetail.JPG)
+  ![Post Details Screenshot](documentation/screenshots/postdetail.JPG)
 
 #### Comments and Interactions
 

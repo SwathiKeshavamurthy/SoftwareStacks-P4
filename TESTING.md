@@ -41,23 +41,33 @@ Below is a table summarizing the HTML validation results for various pages of th
 
 | HTML Source Code/Page        | Validation Results PDF                | Errors | Warnings |
 |------------------------------|---------------------------------------|--------|----------|
-| **Main Page**                | [View PDF](path/to/base-page.pdf) | 0      | 2        |
-| **Home Page**                | [View PDF](path/to/home-page.pdf) | 0      | 2        |
-| **About & Contact Page**     | [View PDF](path/to/about-page.pdf)| 1      | 1        |
-| **Categories Page**          | [View PDF](path/to/categories.pdf) | 1      | 1        |
-| **Search Results Page**      | [View PDF](path/to/search-page.pdf)| 1      | 1        |
-| **Register Page**            | [View PDF](path/to/register-page.pdf) | 0    | 0        |
-| **Login Page**               | [View PDF](path/to/login-page.pdf) | 2      | 3        |
-| **Logout Page**              | [View PDF](path/to/logout-page.pdf)| 2      | 3        |
-| **Post Detail**              | [View PDF](path/to/post-detail.pdf)| 0      | 1        |
-| **Add Stack Page**           | [View PDF](path/to/add-stack.pdf)  | 0      | 1        |
-| **My Bookmarks Page**        | [View PDF](path/to/bookmarks-page.pdf)| 2   | 3        |
-| **My Likes Page**            | [View PDF](path/to/likes-page.pdf) | 2      | 3        |
-| **My Comments Page**         | [View PDF](path/to/comments-page.pdf)| 2   | 3        |
-| **My Posts Page**            | [View PDF](path/to/posts-page.pdf) | 2      | 3        |
-| **403 Page**                 | [View PDF](path/to/403-page.pdf)   | 2      | 3        |
-| **404 Page**                 | [View PDF](path/to/404-page.pdf)   | 2      | 3        |
-| **500 Page**                 | [View PDF](path/to/500-page.pdf)   | 2      | 3        |
+| **Base Page**            | [View PDF](https://github.com/SwathiKeshavamurthy/SoftwareStacks-P4/blob/main/documentation/validation/html/base.pdf) | 0      | 0        |
+| **Home Page**     | [View PDF](https://github.com/SwathiKeshavamurthy/SoftwareStacks-P4/blob/main/documentation/validation/html/index.pdf) | 0      | 0        |
+| **About & Contact Page**     | [View PDF](https://github.com/SwathiKeshavamurthy/SoftwareStacks-P4/blob/main/documentation/validation/html/aboutandcontact.pdf)| 0      | 0        |
+| **Categories Page**          | [View PDF](https://github.com/SwathiKeshavamurthy/SoftwareStacks-P4/blob/main/documentation/validation/html/category.pdf) | 0      | 0        |
+| **Search Results Page**      | [View PDF](https://github.com/SwathiKeshavamurthy/SoftwareStacks-P4/blob/main/documentation/validation/html/search.pdf)| 0      | 0        |
+| **Register Page**            | [View PDF](https://github.com/SwathiKeshavamurthy/SoftwareStacks-P4/blob/main/documentation/validation/html/signup.pdf) | 4    | 0        |
+| **Login Page**               | [View PDF](https://github.com/SwathiKeshavamurthy/SoftwareStacks-P4/blob/main/documentation/validation/html/signin.pdf) | 0      | 0        |
+| **Logout Page**              | [View PDF](https://github.com/SwathiKeshavamurthy/SoftwareStacks-P4/blob/main/documentation/validation/html/signout.pdf)| 0     | 0        |
+| **Post Detail**              | [View PDF](https://github.com/SwathiKeshavamurthy/SoftwareStacks-P4/blob/main/documentation/validation/html/postdetail.pdf)| 28      | 0        |
+| **Add Stack Page**           | [View PDF](https://github.com/SwathiKeshavamurthy/SoftwareStacks-P4/blob/main/documentation/validation/html/addpost.pdf)  | 0      | 0        |
+| **My Bookmarks Page**        | [View PDF](https://github.com/SwathiKeshavamurthy/SoftwareStacks-P4/blob/main/documentation/validation/html/mybookmarks.pdf)| 0   | 0        |
+| **My Likes Page**            | [View PDF](https://github.com/SwathiKeshavamurthy/SoftwareStacks-P4/blob/main/documentation/validation/html/mylikes.pdf) | 0      | 0        |
+| **My Comments Page**         | [View PDF](https://github.com/SwathiKeshavamurthy/SoftwareStacks-P4/blob/main/documentation/validation/html/mycomments.pdf)| 0   | 0        |
+| **My Posts Page**            | [View PDF](https://github.com/SwathiKeshavamurthy/SoftwareStacks-P4/blob/main/documentation/validation/html/myposts.pdf) | 0      | 0        |
+| **404 Page**                 | [View PDF](https://github.com/SwathiKeshavamurthy/SoftwareStacks-P4/blob/main/documentation/validation/html/404.pdf)   | 0      | 0        |
+
+**Signup Page Errors** 
+
+![Signup Page Error](documentation/validation/html/siguperror.JPG)
+
+**Post Detail Page Errors**
+
+![Post Detail Page Error](documentation/validation/html/collage.jpg)
+
+**I tried to resolve the above errors of SignUp Page and Post Detail Page but there were from SUMMERNOTE. I asked a Tutor about this.** 
+
+![tutor](documentation/validation/html/tutor.JPG)
 
 - **Errors** are the actual HTML issues that need to be fixed as they may affect the functionality or appearance of the website.
 - **Warnings** are generally suggestions for best practices, which are not critical but could improve the code efficiency or accessibility.
@@ -69,7 +79,7 @@ Below is a table summarizing the HTML validation results for various pages of th
 
 ![CSS Screenshot](documentation/screenshots/css.JPG)
 
-**[CSS Validation Results PDF](https://github.com/SwathiKeshavamurthy/SoftwareStacks-P4/blob/main/documentation/validation/css.pdf)**
+**[CSS Validation Results PDF](https://github.com/SwathiKeshavamurthy/SoftwareStacks-P4/blob/main/documentation/validation/html/css.pdf)**
 
 
 #### JavaScript Validation

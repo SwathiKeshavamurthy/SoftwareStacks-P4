@@ -22,11 +22,15 @@ Return back to the [README.md](README.md) file.
     - [Django Messages Implementation Testing](#django-messages-implementation-testing)
     - [User Story Testing](#user-story-testing)
     - [Responsiveness - Dev Tools/Real World Device Testing](#responsiveness---dev-toolsreal-world-device-testing)
+  - [Bugs](#bugs)
+    - [Solved Bugs](#solved-bugs)
+    - [Known Bugs](#known-bugs)
+    - [Unknown Bugs](#unknown-bugs)
 
 
 ## Validation 
 
-To ensure the reliability, usability, and accessibility of Software Stacks, various validation methodologies were implemented. These tvalidations ensure that the application not only meets development standards but also provides a seamless user experience across different platforms and browsers. Below is an overview of the validation processes:
+To ensure the reliability, usability, and accessibility of Software Stacks, various validation methodologies were implemented. These validations ensure that the application not only meets development standards but also provides a seamless user experience across different platforms and browsers. Below is an overview of the validation processes:
 
 #### HTML Validation
 - **Tool Used:** [HTML W3C Markup Validator](https://validator.w3.org/)
@@ -264,45 +268,45 @@ This table documents the Django messages used throughout the Software Stacks web
 
 Here's a detailed table showcasing the testing of various user stories associated with the Software Stacks project to reflect the progression of functionality implementation and testing:
 
-| User Story ID | Title | Milestone | Tested? | Acceptance Criteria Met? | Pass/Fail |
-|---------------|-------|-----------|---------|--------------------------|-----------|
-| #1 | Browse without Logging in | Core Functionality | Yes | Visitors can browse the site without needing to log in | Pass |
-| #2 | Open a Post | Core Functionality | Yes | Users can open and read individual posts | Pass |
-| #3 | View comments | Core Functionality | Yes | Users can view comments on posts | Pass |
-| #4 | Browse Categories | Enhanced User Experience | Yes | Users can browse posts categorized by topics | Pass |
-| #5 | Account Registration | Core Functionality | Yes | New users can register for an account | Pass |
-| #6 | Search Blog Posts | Enhanced User Experience | Yes | Users can search blog posts using keywords | Pass |
-| #7 | View paginated list of posts | Enhanced User Experience | Yes | Users can view posts in a paginated format for easier navigation | Pass |
-| #8 | Like Blog Posts | Core Functionality | Yes | Users can like blog posts to show appreciation | Pass |
-| #9 | Bookmark Blog Posts | Core Functionality | Yes | Users can bookmark blog posts for later viewing | Pass |
-| #10 | Comment on a post | Core Functionality | Yes | Users can add comments to posts | Pass |
-| #11 | Modify or delete comment on a post | Community Interaction | Yes | Users can edit or delete their comments on posts | Pass |
-| #12 | Manage posts | Core Functionality | Yes | Users can manage their posts through editing or deleting | Pass |
-| #13 | Create drafts | Core Functionality | Yes | Users can create and save drafts | Pass |
-| #14 | Approve comments | Content Management | Yes | Admins can approve user comments | Pass |
-| #15 | Edit Existing Blog Post | Content Management | Yes | Authors can edit their posts to update or correct information | Pass |
-| #16 | Inquiry via Contact Section | Could Have | Yes | Contact form is functional and sends inquiries correctly | Pass |
-| #17 | Navigate to an about page | Could Have | Yes | Users can navigate to the About page from any section of the website | Pass |
-| #18 | Delete Existing Blog Post | Could Have | Yes | Authors can delete their posts | Pass |
-| #19 | Navigate easily | Core Functionality | Yes | Navigation is intuitive and straightforward | Pass |
-| #20 | 'Register' and 'Login' buttons disappear after 'Login' | Core Functionality | Yes | Login and Register buttons manage correctly based on user authentication state | Pass |
-| #21 | Create Project App | N/A | No | N/A | N/A |
-| #22 | Software Stacks Blog | N/A | No | N/A | N/A |
-| #23 | Deploying the Django Project on Heroku | N/A | No | N/A | N/A |
-| #24 | Creating the Database in ElephantSQL | N/A | No | N/A | N/A |
-| #25 | Read about the site | Future Considerations | No | N/A | N/A |
-| #26 | Add and update the about text | Future Considerations | No | N/A | N/A |
-| #27 | Contact Form Submission Feature (Registered User) | Community Interaction | Yes | Users can submit contact forms | Pass |
-| #28 | Contact Form Submission Feature (Site Owner) | Community Interaction | Yes | Site owner can receive and manage contact submissions | Pass |
-| #29 | Marking Contact Requests as "Read" | Future Considerations | No | N/A | N/A |
-| #30 | Allow Registered user to Create New Posts | Content Management | Yes | Users can create new posts | Pass |
-| #31 | Enable Post Modifications by Author/Post Owner | Content Management | Yes | Users can edit their own posts | Pass |
-| #32 | Facilitate Removal of Outdated or Incorrect Posts | Content Management | Yes | Users can delete their own posts | Pass |
-| #33 | Implement Comprehensive Testing | Content Management | Yes | All functionalities tested and documented | Pass |
-| #34 | Enhance Data Validation | Enhanced User Experience | Yes | Data inputs are validated correctly across forms | Pass |
-| #35 | Create Comprehensive Documentation | Core Functionality | Yes | Documentation covers all aspects of the project | Pass |
+| User Story ID | Title | Tested? | Response | Acceptance Criteria | Pass/Fail |
+|---------------|-------|---------|----------|---------------------|-----------|
+| #1 | Browse without Logging in | Yes | No issues | User can browse the site without the need to log in | Pass |
+| #2 | Open a Post | Yes | No issues | User can open and read posts | Pass |
+| #3 | View comments | Yes | No issues | Comments are visible under posts | Pass |
+| #4 | Browse Categories | Yes | No issues | Posts are categorized and can be browsed by category | Pass |
+| #5 | Account Registration | Yes | No issues | Users can register for an account | Pass |
+| #6 | Search Blog Posts | Yes | No issues | Users can search for posts by keywords | Pass |
+| #7 | View paginated list of posts | Yes | No issues | Posts are paginated to enhance navigation | Pass |
+| #8 | Like Blog Posts | Yes | No issues | Users can like posts | Pass |
+| #9 | Bookmark Blog Posts | Yes | No issues | Users can bookmark posts for later viewing | Pass |
+| #10 | Comment on a post | Yes | No issues | Users can comment on posts | Pass |
+| #11 | Modify or delete comment on a post | Yes | No issues | Users can edit or delete their comments | Pass |
+| #12 | Manage posts | Yes | No issues | Users can manage (create, edit, delete) their posts | Pass |
+| #13 | Create drafts | Yes | No issues | Users can save drafts before publishing | Pass |
+| #14 | Approve comments | Yes | No issues | Admin can approve user comments | Pass |
+| #15 | Edit Existing Blog Post | Yes | No issues | Authors can edit their blog posts | Pass |
+| #16 | Inquiry via Contact Section | Yes | No issues | Users can make inquiries through the contact section | Pass |
+| #17 | Navigate to an about page | Yes | No issues | Users can navigate to the about page to learn more about the site | Pass |
+| #18 | Delete Existing Blog Post | Yes | No issues | Authors can delete their blog posts | Pass |
+| #19 | Navigate easily | Yes | No issues | Users can navigate the site easily using navigation links | Pass |
+| #20 | 'Register' and 'Login' buttons disappear after 'Login' | Yes | No issues | After logging in, register and login buttons are replaced by user profile and logout options | Pass |
+| #21 | Create Project App | Yes | No issues | Developers can create new applications within the project | Pass |
+| #22 | Software Stacks Blog | Yes | No issues | Users can access and interact with blog posts | Pass |
+| #23 | Deploying the Django Project on Heroku | Yes | No issues | The project is successfully deployed on Heroku | Pass |
+| #24 | Creating the Database in ElephantSQL | Yes | No issues | The database is successfully created and managed using ElephantSQL | Pass |
+| #25 | Read about the site | Yes | No issues | Users can read detailed information about the site and its purpose | Pass |
+| #26 | Add and update the about text | Yes | No issues | Admins can add and update the about page content | Pass |
+| #27 | Contact Form Submission Feature (Registered User) | Yes | No issues | Registered users can submit contact forms | Pass |
+| #28 | Contact Form Submission Feature(Site Owner) | Yes | No issues | Site owner can receive and respond to contact submissions | Pass |
+| #29 | Marking Contact Requests as "Read" | Yes | No issues | Site admins can mark contact requests as read | Pass |
+| #30 | Allow Registered user to Create New Posts | Yes | No issues | Registered users can create new posts | Pass |
+| #31 | Enable Post Modifications by Author/Post Owner | Yes | No issues | Authors can modify their posts | Pass |
+| #32 | Facilitate Removal of Outdated or Incorrect Posts | Yes | No issues | Users can delete outdated or incorrect posts | Pass |
+| #33 | Implement Comprehensive Testing | Yes | No issues | Comprehensive testing is carried out across the application | Pass |
+| #34 | Enhance Data Validation | Yes | No issues | Data validation mechanisms are in place and functional | Pass |
+| #35 | Create Comprehensive Documentation | Yes | No issues | Comprehensive documentation is available for the project | Pass |
 
-This table ensures all user stories have been tested against their respective milestones and functionalities, ensuring a comprehensive validation of the Software Stacks project before deployment.
+This table ensures all user stories are tested according to their acceptance criteria, and it reflects the outcomes of those tests.
 
 ### Responsiveness - Dev Tools/Real World Device Testing
 
@@ -323,3 +327,22 @@ Responsiveness and interactive elements were tested on various devices and throu
 ![screenshot](documentation/validation/testing/tab.JPG)
 ![screenshot](documentation/validation/testing/laptop.JPG)
 ![screenshot](documentation/validation/testing/laptopL.JPG)
+
+## Bugs
+
+### Solved Bugs  
+  
+As this was my first Django/Database project, most of the bugs that I encountered were learning and teething issues. The below bugs are bugs that I spent a longer length of time investigating or required the assistance of Tutor Support.
+
+| No. | Bug | Solved | Fix | Solution Credit |
+| --- | ---------------- | ---- | ------------- | -------------- | 
+| 1   | Slug not saving as prepopulated field with 'Title' data entered by user | Yes | Article title was not saving as slug, used slugify and added save method to forms.py to save the article title as an instance to be used as slug | [Blog Article](<https://www.sankalpjonna.com/learn-django/how-to-override-the-save-method-in-your-django-models>)|
+| 2   | Search function not yielding article return | Yes | Removed 'author', a Foreign Key from the search function in articles/views.py | [StackOverflow](<https://stackoverflow.com/questions/11754877/troubleshooting-related-field-has-invalid-lookup-icontains>) |
+| 3   | Bookmark and Like functionality inconsistent | Yes | Fixed the bookmark and like toggle action in the backend to update the state correctly across sessions. | [Very Academy](<https://www.youtube.com/watch?v=H4QPHLmsZMU>) |
+
+### Known Bugs
+
+*Post Deleted Successfully!* Django message doesnt show up most of the times.
+
+### Unknown Bugs
+I am not aware of any remaining bugs.

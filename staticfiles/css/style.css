@@ -234,5 +234,38 @@ body {
 
 .custom-message {
     font-weight: bold;
-    font-size: 18px; /* Adjust the font size as needed */
+    font-size: 18px;
+}
+
+.btn-custom {
+    background-color: #003459;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+  .btn-custom:hover {
+    background-color: #007EA7;
+    color: white;
+}
+
+  .btn-custom-logout {
+    background-color: #003459;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+  .btn-custom-logout:hover {
+    background-color: #007EA7;
+    color: white;
+}
+
+.btn-signup {
+    background-color: #003459;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+  .btn-signup:hover {
+    background-color: #007EA7;
+    color: white;
 }

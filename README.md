@@ -238,6 +238,14 @@ To effectively manage project scope, Software Stacks will implement the MoSCoW p
 | Modify or Delete My Comment on a Post | As a **user**, I want to **modify or delete my comment on a post** so that I can **manage my interactions**. | **COULD HAVE** | Community Interaction |
 | Create Comprehensive Documentation | As a **developer**, I want to **create comprehensive documentation** so that **users and other developers can understand and use the site effectively**. | **MUST HAVE** | Future Considerations |
 
+[Software Stacks GitHub Link](https://github.com/SwathiKeshavamurthy/SoftwareStacks-P4)
+
+[Software Stacks Kanban Board Link](https://github.com/users/SwathiKeshavamurthy/projects/9)
+
+[Software Stacks User Stories Link](https://github.com/SwathiKeshavamurthy/SoftwareStacks-P4/issues)
+
+[Software Stacks Milestones Link](https://github.com/SwathiKeshavamurthy/SoftwareStacks-P4/milestones)
+
 ### Milestones
 
 **A milestone**, here from above table represents a significant checkpoint or goal in a project's timeline. Milestones are used to signify the completion of a key phase of work, the achievement of a major objective, or the meeting of a significant deadline. They are critical for tracking progress, setting deadlines, and aligning the team and stakeholders around key project events or achievements. Unlike tasks or user stories, milestones don't involve work themselves but are markers indicating that a specific set of work has been completed.

@@ -6,24 +6,18 @@
 
 {% block content %}
 
-<style>
-  .btn-signup {
-    background-color: #003459;
-    color: white;
-    transition: background-color 0.3s;
-  }
-
-  .btn-signup:hover {
-    background-color: #007EA7;
-    color: white;
-  }
-</style>
-
 <div class="container text-center p-5">
   <h1>{% trans "Sign Up" %}</h1>
   <p>{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}" class="text-decoration-none">SIGN IN/LOG IN</a>.{% endblocktrans %}</p>
   <form class="form p-2" id="signup_form" method="post" action="{% url 'account_signup' %}">
     {% csrf_token %}
+    {% if form.non_field_errors %}
+      <div class="alert alert-danger" role="alert">
+        {% for error in form.non_field_errors %}
+          {{ error }}
+        {% endfor %}
+      </div>
+    {% endif %}
     {{ form.as_p }}
     {% if redirect_field_value %}
     <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />

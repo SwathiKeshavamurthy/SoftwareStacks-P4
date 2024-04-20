@@ -22,9 +22,9 @@ Welcome to [**Software Stacks**](https://software-stacks-442e4344b2ad.herokuapp.
 Software Stacks offers a range of features to engage our community, including:
 
 - **Educational Blog Posts:** Dive deep into comprehensive articles covering advanced front-end development, e-commerce solutions, and predictive analytics. Our posts are tailored to inform, educate, and inspire.
-- **Community Interaction:** Engage with posts through comments, likes, and bookmarks. Share your thoughts, ask questions, and interact with other members of the community.
+- **Community Interaction:** Engage with posts through comments, likes, and bookmarks. Add new posts and Share your thoughts, ask questions, and interact with other members of the community.
 - **Resource Hub:** Access a curated selection of resources, and guides. Whether it's learning a new programming language or understanding the nuances of digital marketing in e-commerce, our resource hub has you covered.
-- **User Contributions:** Registered users can contribute their own articles, share their expertise, and add to the collective knowledge base of Software Stacks.
+- **User Contributions:** Registered users can contribute their own posts, share their expertise, and add to the collective knowledge base of Software Stacks.
 
 ### Get Involved
 
@@ -137,7 +137,7 @@ Software Stacks is an engaging web platform dedicated to the exploration and emp
 
 - Joining a vibrant community of tech enthusiasts and professionals.
 - Creating personalized user profiles to share experiences and insights.
-- Contributing and interacting with comprehensive articles and tutorials.
+- Contributing and interacting with comprehensive posts.
 - Discovering cutting-edge trends and best practices in technology domains.
 - Facilitating discussions and exchanges within a supportive community.
 
@@ -816,7 +816,7 @@ These features are designed to enhance the functionality and user experience of 
 - [**JSHint**](https://jshint.com/): A tool that helps to detect errors and potential problems in JavaScript code.
 - [**CI Python Linter**](https://pep8ci.herokuapp.com/): Analyzes Python code to look for bugs and signs of poor quality.
 - [**Google Lighthouse**](https://developers.google.com/web/tools/lighthouse): For auditing performance, accessibility, and search engine optimization of web pages.
-- 
+
 ## Others
 - [**Cloudinary**](https://cloudinary.com/): An end-to-end image and video management solution.
 - [**Favicon.io**](https://favicon.io/): To generate favicon icons for the website.
@@ -945,3 +945,5 @@ The following sites were used to gather the photographic media used:
 - Thank you to my Code Institute mentor **Jack Wachira** for his positive support, guidance and advice.
 - Thanks to **Kristyna**, Cohort facilitator at Code Institute how she always there to give all the infromation needed and for keeping positive the energy up.
 - Thanks to my **fellow students** for constantly inspiring on slack and being there for each other to help in trouble.
+
+**Due to time constraints, I was unable to add more features and functionality. However, I am happy and satisfied with my project and its current learning outcomes.** *"Putting a lot of time and effort into this project feels GREAT!"*

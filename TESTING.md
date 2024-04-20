@@ -22,6 +22,11 @@ Return back to the [README.md](README.md) file.
     - [Django Messages Implementation Testing](#django-messages-implementation-testing)
     - [User Story Testing](#user-story-testing)
     - [Responsiveness - Dev Tools/Real World Device Testing](#responsiveness---dev-toolsreal-world-device-testing)
+  - [Automated Testing](#automated-testing)
+    - [Running the Tests](#running-the-tests)
+    - [Test Database](#test-database)
+    - [Importance of Testing](#importance-of-testing)
+    - [Continuous Integration](#continuous-integration)
   - [Bugs](#bugs)
     - [Solved Bugs](#solved-bugs)
     - [Known Bugs](#known-bugs)
@@ -327,6 +332,40 @@ Responsiveness and interactive elements were tested on various devices and throu
 ![screenshot](documentation/validation/testing/tab.JPG)
 ![screenshot](documentation/validation/testing/laptop.JPG)
 ![screenshot](documentation/validation/testing/laptopL.JPG)
+
+## Automated Testing
+
+Automated testing plays a critical role in the Software Stacks development process, ensuring the integrity and functionality of the application as new features are added or existing features are modified. This screenshot below provides an overview of our automated test suite's execution.
+
+![screenshot](documentation/screenshots/autotest.JPG)
+
+### Running the Tests
+
+To run the automated tests for Software Stacks, follow these steps:
+
+1. Open your terminal or command prompt.
+2. Navigate to the root directory of the project where the `manage.py` file is located.
+3. Execute the following command:
+   ```bash
+   python manage.py test
+   ```
+   This command will initiate the Django test runner, which will find and run tests written throughout the project.
+
+### Test Database
+
+During testing, Django creates a separate database to ensure that the tests do not interfere with the production or development database. This test database is created before the tests run and is destroyed once the tests have completed. This process ensures that the testing environment is isolated and consistent.
+
+### Importance of Testing
+
+Automated tests help us to:
+- Quickly detect and fix bugs.
+- Ensure that new features integrate seamlessly without breaking existing functionality.
+- Improve code quality and maintainability.
+- Build confidence in the stability of the application.
+
+### Continuous Integration
+
+Our project integrates these tests into a continuous integration (CI) system, which automatically runs the tests on every push to the repository. This ensures that all changes are validated and meet our quality standards before they are merged into the main codebase.
 
 ## Bugs
 

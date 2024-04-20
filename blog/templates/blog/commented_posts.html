@@ -8,7 +8,6 @@
             <div class="post">
                 <h2><a href="{% url 'post_detail' post.slug %}">{{ post.title }}</a></h2>
                 <p>{{ post.excerpt }}</p>
-                <!-- Add more post details as needed -->
             </div>
         {% endfor %}
     {% else %}

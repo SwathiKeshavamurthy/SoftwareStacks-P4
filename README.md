@@ -47,17 +47,19 @@ Join Software Stacks today and become part of a community that's shaping the fut
 - [Project Planning](#project-planning)
   - [Strategy Plane](#strategy-plane)
   - [Agile Methodologies - Project Management:](#agile-methodologies---project-management)
-  - [MoSCoW Prioritization:](#moscow-prioritization)
-  - [User Stories, Milestones and Epics](#user-stories-milestones-and-epics)
-    - [Users Stories](#users-stories)
-    - [Milestones](#milestones)
-    - [Epics](#epics)
-      - [Epic 1: User Engagement and Interaction](#epic-1-user-engagement-and-interaction)
-      - [Epic 2: User Account Management](#epic-2-user-account-management)
-      - [Epic 3: Core Platform Development](#epic-3-core-platform-development)
-      - [Epic 4: Content Management and Administration](#epic-4-content-management-and-administration)
-      - [Epic 5: Community Building and Feedback](#epic-5-community-building-and-feedback)
-      - [Epic 6: Documentation and Quality Assurance](#epic-6-documentation-and-quality-assurance)
+    - [Story Points Allocation](#story-points-allocation)
+    - [Sprint Planning Example](#sprint-planning-example)
+    - [MoSCoW Prioritization:](#moscow-prioritization)
+    - [User Stories, Milestones and Epics](#user-stories-milestones-and-epics)
+      - [Users Stories](#users-stories)
+      - [Milestones](#milestones)
+      - [Epics](#epics)
+        - [Epic 1: User Engagement and Interaction](#epic-1-user-engagement-and-interaction)
+        - [Epic 2: User Account Management](#epic-2-user-account-management)
+        - [Epic 3: Core Platform Development](#epic-3-core-platform-development)
+        - [Epic 4: Content Management and Administration](#epic-4-content-management-and-administration)
+        - [Epic 5: Community Building and Feedback](#epic-5-community-building-and-feedback)
+        - [Epic 6: Documentation and Quality Assurance](#epic-6-documentation-and-quality-assurance)
   - [Scope Plane](#scope-plane)
   - [Structural Plane](#structural-plane)
   - [Skeleton \& Surface Planes](#skeleton--surface-planes)
@@ -218,16 +220,46 @@ Software Stacks aims to create a centralized platform where users can explore, l
 ## Agile Methodologies - Project Management:  
 Software Stacks adopts Agile project management to ensure iterative development and continuous improvement. The use of GitHub Projects or similar tools will facilitate task management, tracking progress through a Kanban-style board.
 
-## MoSCoW Prioritization: 
+### Story Points Allocation
+
+**Story Points Distribution**
+Story points were assigned to each user story to quantify the effort and complexity involved. These points helped us estimate the workload and prioritize our tasks effectively.
+
+**Allocation Guidelines:**
+- **Must-have Stories**: Essential features that are fundamental for the project's operations were given the highest priority.
+- **Should-have Stories**: Important but not critical features that enhance the user experience without being essential to the core functionality. According to our project management guidelines, the total story points assigned to "Should-have" stories did not exceed 60% of the total points in any sprint. This ensured that essential features were developed first and resources were not overextended on less critical functionalities.
+- **Could-have Stories**: Desirable features that were considered only after fulfilling the "Must-have" and "Should-have" categories.
+
+### Sprint Planning Example
+Here is an example of how story points are managed and allocated across different categories in sprints:
+
+- **Total Story Points for the Sprint**: 100
+- **Must-have Points**: 40 (40% of the total)
+- **Should-have Points**: 50 (50% of the total)
+- **Could-have Points**: 10 (10% of the total)
+
+**Example Milestones:**
+- **Milestone 1: Core Functionality**
+  - Total Story Points: 60
+  - Breakdown:
+    - Must-have: 36 points
+    - Should-have: 24 points
+- **Milestone 2: Enhanced User Experience**
+  - Total Story Points: 80
+  - Breakdown:
+    - Must-have: 32 points
+    - Should-have: 48 points
+
+### MoSCoW Prioritization: 
 To effectively manage project scope, Software Stacks will implement the MoSCoW prioritization method:
 - **Must Haves**: Core functionalities that include article browsing, user registration/login, and interactive forums.
 - **Should Haves**: Enhanced features like user profiles, article bookmarking, and advanced search capabilities.
 - **Could Haves**: Additional functionalities such as personalized learning paths, user badges for engagement, and API integrations for pulling in external content.
 - **Won't Haves**: Features that are not essential for the initial launch phase, such as a full-fledged online course module or third-party advertising.
 
-## User Stories, Milestones and Epics
+### User Stories, Milestones and Epics
 
-### Users Stories
+#### Users Stories
 
 **User stories** are a brief statement of intent that captures what a user does or needs to do as part of their job function. They are written in non-technical language and focus on the value or outcome that the user
 
@@ -256,19 +288,19 @@ To effectively manage project scope, Software Stacks will implement the MoSCoW p
 
 [Software Stacks Kanban Board Link](https://github.com/users/SwathiKeshavamurthy/projects/9)
 
-[Software Stacks User Stories Link](https://github.com/SwathiKeshavamurthy/SoftwareStacks-P4/issues)
+[Software Stacks User Stories Link](https://github.com/SwathiKeshavamurthy/SoftwareStacks-P4/issues?q=is%3Aissue+is%3Aclosed)
 
 [Software Stacks Milestones Link](https://github.com/SwathiKeshavamurthy/SoftwareStacks-P4/milestones)
 
-### Milestones
+#### Milestones
 
 **A milestone**, here from above table represents a significant checkpoint or goal in a project's timeline. Milestones are used to signify the completion of a key phase of work, the achievement of a major objective, or the meeting of a significant deadline. They are critical for tracking progress, setting deadlines, and aligning the team and stakeholders around key project events or achievements. Unlike tasks or user stories, milestones don't involve work themselves but are markers indicating that a specific set of work has been completed.
 
-### Epics
+#### Epics
 
 **An epic** in software development and project management is a large body of work that can be broken down into smaller tasks or stories, often referred to as user stories. Epics are used to organize related tasks that contribute toward a significant, unified objective within a project. They help teams to focus on bigger-picture goals and ensure that all the smaller tasks (user stories) are aligned towards achieving that overarching aim. Epics typically span across multiple sprints or iterations and can take several weeks or months to complete.
 
-#### Epic 1: User Engagement and Interaction
+##### Epic 1: User Engagement and Interaction
 - **Goal:** Enhance user engagement and community interaction through posts, comments, and social features.
 - **Associated User Stories:**
   - Comment on a post
@@ -281,7 +313,7 @@ To effectively manage project scope, Software Stacks will implement the MoSCoW p
   - Modify or delete comment on a post
   - Inquiry via Contact Section
 
-#### Epic 2: User Account Management
+##### Epic 2: User Account Management
 - **Goal:** Provide a seamless and secure user experience from account registration through to content management.
 - **Associated User Stories:**
   - Account Registration
@@ -293,7 +325,7 @@ To effectively manage project scope, Software Stacks will implement the MoSCoW p
   - Delete Existing Blog Post
   - Add Post USER STORY: Allow Registered user to Create New Posts
 
-#### Epic 3: Core Platform Development
+##### Epic 3: Core Platform Development
 - **Goal:** Establish the foundational elements of the Software Stacks platform, including database creation, deployment, and basic functionalities.
 - **Associated User Stories:**
   - Creating the Database in ElephantSQL
@@ -303,7 +335,7 @@ To effectively manage project scope, Software Stacks will implement the MoSCoW p
   - Open a Post
   - Browse without Logging in
 
-#### Epic 4: Content Management and Administration
+##### Epic 4: Content Management and Administration
 - **Goal:** Empower authors with comprehensive tools for content creation, modification, and management.
 - **Associated User Stories:**
   - EDIT POST USER STORY: Enable Post Modifications by Author/Post Owner.
@@ -312,7 +344,7 @@ To effectively manage project scope, Software Stacks will implement the MoSCoW p
   - TESTING: Implement Comprehensive Testing
   - VALIDATION: Enhance Data Validation
 
-#### Epic 5: Community Building and Feedback
+##### Epic 5: Community Building and Feedback
 - **Goal:** Foster community interaction and feedback through enhanced contact form functionalities and about page updates.
 - **Associated User Stories:**
   - CONTACT FORM USER STORY: Marking Contact Requests as "Read"
@@ -321,7 +353,7 @@ To effectively manage project scope, Software Stacks will implement the MoSCoW p
   - ABOUT APP USER STORY: Add and update the about text
   - ABOUT APP USER STORY: Read about the site
 
-#### Epic 6: Documentation and Quality Assurance
+##### Epic 6: Documentation and Quality Assurance
 - **Goal:** Ensure the platform's reliability and ease of use through comprehensive documentation, testing, and data validation.
 - **Associated User Stories:**
   - DOCUMENTATION: Create Comprehensive Documentation

@@ -381,7 +381,7 @@ As this was my first Django/Database project, most of the bugs that I encountere
 
 ### Known Bugs
 
-*Post Deleted Successfully!* Django message doesnt show up most of the times.
+*Post Deleted Successfully!* Django message doesn't show up most of the times.
 
 ### Unknown Bugs
 I am not aware of any remaining bugs.
